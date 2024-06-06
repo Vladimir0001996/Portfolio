@@ -1,0 +1,316 @@
+jQuery(document).ready(function($){
+
+
+   // theme/lang switch 
+   let progressPointsBackColorActive;
+
+   function LetDark () {
+    console.log('let dark');
+    $('body').addClass('dark_theme')
+    $('body').removeClass('light_theme')
+    $('#body_cover').css('background-image','url(img/dark_back_v2.jpg)')
+    $('#projects_right_arrow').css('background-image','url(img/right_dark.png)')
+    $('#projects_left_arrow').css('background-image','url(img/left_dark.png)')
+    $('#skill_1_img').attr('src','img/html_dark.png')
+    $('#skill_2_img').attr('src','img/css_dark.png')
+    $('#skill_3_img').attr('src','img/js_dark.png')
+    $('#theme_light').css('color','#848484')
+    $('#theme_dark').hover(()=>{
+      $('#theme_dark').css('color','#282879')
+    },()=>{
+      $('#theme_dark').css('color','#282879')
+    })
+    $('#theme_light').hover(()=>{
+      $('#theme_light').css('color','#ffff00')
+    },()=>{
+      $('#theme_light').css('color','#848484')
+    })
+    $('#theme_dark').css('color','#282879')
+    $('#mail').css('background-image','url(img/e-mail_dark.png)')
+    $('#footer_mail').css('background-image','url(img/e-mail_dark.png)')
+    $('#header_settings').attr('src','img/settings_dark.png')
+    progressPointsBackColorActive = '#e6eceb'
+  }
+
+  function LetLight () {
+    console.log('let light');
+    $('body').removeClass('dark_theme')
+    $('body').addClass('light_theme')
+    $('#body_cover').css('background-image','url(img/light_back_v4.jpg)')
+    $('#projects_right_arrow').css('background-image','url(img/right.png)')
+    $('#projects_left_arrow').css('background-image','url(img/left.png)')
+    $('#skill_1_img').attr('src','img/html.png')
+    $('#skill_2_img').attr('src','img/css.png')
+    $('#skill_3_img').attr('src','img/js.png')
+    $('#theme_light').css('color','#ffff00')
+    $('#theme_light').hover(()=>{
+      $('#theme_light').css('color','#ffff00')
+    },()=>{
+      $('#theme_light').css('color','#ffff00')
+    })
+    $('#theme_dark').css('color','#848484')
+    $('#theme_dark').hover(()=>{
+      $('#theme_dark').css('color','#282879')
+    },()=>{
+      $('#theme_dark').css('color','#848484')
+    })
+    $('#mail').css('background-image','url(img/e-mail.png)')
+    $('#footer_mail').css('background-image','url(img/e-mail.png)')
+    $('#header_settings').attr('src','img/settings.png')
+    progressPointsBackColorActive = '#1d2020'
+  }
+  $('#theme_light').on('click', ()=>{
+    LetLight()
+  })
+  $('#theme_dark').on('click', ()=>{
+    LetDark()
+  })
+
+  // theme auto setter 
+  let isThemeDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (isThemeDark == true) {
+    LetDark()
+  }
+  else {
+    LetLight()
+  }
+
+  // welcome Animation
+  function HiAnimation () {
+    clearInterval (blocksAnimation);
+    let rotation = 0
+    let isUp = true
+    let welcomeAnimaiton = setInterval(()=>{
+      if (isUp == true) {
+        rotation ++
+        if (rotation == 20) {
+          isUp = false
+        }
+      }
+      else {
+        rotation --
+        if (rotation == -20) {
+          isUp = true
+        }
+      }
+      let deg = rotation + 'deg'
+      $('#welcome_hi_emoji').css('rotate', deg)
+    },5)
+    setTimeout(() => {
+      clearInterval(welcomeAnimaiton)
+    }, 2500);
+  }
+
+  counter = -500
+  let blocksAnimation = setInterval(()=>{
+    counter = counter + 5
+    px1 = counter + 'px'
+    px2 = counter - 150 + 'px'
+    let opacity =  1+(counter/500);
+    $('#welcome_right_cover').css('opacity' , opacity)
+    $('#welcome_h1_cover').css('top', px1).css('opacity' , opacity)
+    $('#welcome_h2').css('left', px1).css('opacity' , opacity)
+    $('#welcome_text').css('bottom', px2).css('opacity' , opacity)
+    if (counter > 1) {
+      HiAnimation()
+      $('body').css('overflow-x','visible')
+    }
+  },4)
+
+  $('#welcome_hi_emoji').on('mouseover', ()=>{
+    HiAnimation()
+  })
+
+  // Projects from json
+  let contentRequestURL = 'data/content.json';
+  let contentRequest = new XMLHttpRequest();
+  contentRequest.open("GET", contentRequestURL);
+  contentRequest.responseType = "json";
+  contentRequest.send();
+  contentRequest.onload = function () {
+    let contentOnServer = contentRequest.response;
+    for (let i = 0; i < contentOnServer.projects.length; i++) {
+      $('#projects_scroll').prepend('<div class="project_card" id="' + i + '"><h3></h3><img><p></p></div>')
+    }
+    for (let i = 0; i < contentOnServer.projects.length; i++) {
+      $('#projects_scroll')[0].children[i].children[0].innerText = contentOnServer.projects[i].header;
+      $('#projects_scroll')[0].children[i].children[1].setAttribute('src',contentOnServer.projects[i].img);
+      $('#projects_scroll')[0].children[i].children[2].innerText = contentOnServer.projects[i].short_discription;
+      if (i == (contentOnServer.projects.length)-1) {
+        $('#projects_scroll').children().on('click',(e)=>{
+          let idInBase;
+          console.log(e.target);
+          if (e.target.className !== 'project_card') {
+            idInBase = contentOnServer.projects.length - e.target.parentElement.id -1;
+          }
+          else {
+            idInBase = contentOnServer.projects.length - e.target.id -1;
+          }
+          console.log(idInBase);
+          $('#project_full_discription').children().remove()
+          $('#project_full_discription').prepend(contentOnServer.projects[idInBase].full_discription)
+          $('#project_full_discription_cover').css('display','block');
+          $('#body').css('overflow','hidden')
+          $('#project_full_discription').scrollTop(0)
+          $('#project_full_discription_cover').on('click',(a)=>{
+            if (a.target.id == 'project_full_discription_cover') {
+              $('#project_full_discription_cover').css('display','none');
+              $('#body').css('overflow','visible')
+            }
+          })
+        })
+      }
+    }
+  }
+
+  // projects gallery progress points
+  function ProgressBar (left) {
+    $('.progress_points').css('background-color', 'transparent')
+    console.log(left);
+    if (left == 0) {
+      $('#progress_point_1').css('background-color', progressPointsBackColorActive)
+    }
+    else if (left == -500) {
+      $('#progress_point_1').css('background-color', progressPointsBackColorActive)
+      $('#progress_point_2').css('background-color', progressPointsBackColorActive)
+    }
+    else if (left == -1000) {
+      $('#progress_point_2').css('background-color', progressPointsBackColorActive)
+    }
+    else if (left == -1500) {
+      $('#progress_point_2').css('background-color', progressPointsBackColorActive)
+      $('#progress_point_3').css('background-color', progressPointsBackColorActive)
+    }
+    else if (left == -2000) {
+      $('#progress_point_3').css('background-color', progressPointsBackColorActive)
+    }
+    else if (left == -2500) {
+      $('#progress_point_3').css('background-color', progressPointsBackColorActive)
+      $('#progress_point_4').css('background-color', progressPointsBackColorActive)
+    }
+    else if (left == -3000) {
+      $('#progress_point_4').css('background-color', progressPointsBackColorActive)
+    }
+  }
+
+  let left = 0;
+  ProgressBar(left)
+
+  $('#projects_left_arrow').on('click',()=>{
+    left = left + 500
+    if (left > 0) {
+      left = -3000
+    }
+    ProgressBar(left)
+    $('#projects_scroll').css('left', left)
+  })
+
+  $('#projects_right_arrow').on('click',()=>{
+    left = left - 500;
+    if (left < -3000) {
+      left = 0
+    }
+    ProgressBar(left)
+    $('#projects_scroll').css('left', left + 'px')
+  })
+
+  $('#progress_point_1').on('click',()=>{
+    $('#projects_scroll').css('left', '0px')
+    left = 0
+    ProgressBar(left)
+  })
+
+  $('#progress_point_2').on('click',()=>{
+    $('#projects_scroll').css('left', '-1000px')
+    left = -1000
+    ProgressBar(left)
+  })
+
+  $('#progress_point_3').on('click',()=>{
+    $('#projects_scroll').css('left', '-2000px')
+    left = -2000
+    ProgressBar(left)
+  })
+
+  $('#progress_point_4').on('click',()=>{
+    $('#projects_scroll').css('left', '-3000px')
+    left = -3000
+    ProgressBar(left)
+  })
+
+  // contacts
+  let isActive = false;
+ $('#contacts').on('mouseover',()=>{
+  $('#telegram').css('bottom','300px')
+  $('#whatsapp').css('bottom','230px')
+  $('#instagram').css('bottom','160px')
+  $('#mail').css('bottom','90px')
+ })
+
+  $('#contacts').on('mouseout', (e)=>{
+    $(document).on('mousemove',(e)=>{
+      if (e.target.className == 'contacts_links') {
+        isActive = true
+      }
+      else {
+        isActive = false
+      }
+    })
+
+    $('#contacts').on('click', ()=>{
+      isActive = false
+    })
+    
+    setTimeout(()=>{
+      if (isActive == false) {
+        $('#telegram').css('bottom','10px')
+        $('#whatsapp').css('bottom','10px')
+        $('#instagram').css('bottom','10px')
+        $('#mail').css('bottom','10px')
+      }
+    },500)
+  })
+
+  // header settings 
+  $('#header_settings').on('click', ()=>{
+    console.log('click');
+    $('#settings_block').toggleClass('displayNone')
+    if ($('#settings_block').css('display') == 'none') {
+      $('#settings_block').css('display','flex')
+      $('header').css('width','610px')
+    }
+    else {
+      $('#settings_block').css('display','none')
+      $('header').css('width','500px')
+    }
+  })
+
+  // skills animation
+  $(document).on('scroll',()=>{
+    if (window.scrollY > $('#project_container').offset().top) {
+      console.log();
+      $('#skill_1_img').css('opacity','1')
+      setTimeout(()=>{
+        $('#skill_2_img').css('opacity','1');
+        $('#skill_4_img').css('opacity','1')
+      },500);
+      setTimeout(()=>{
+        $('#skill_3_img').css('opacity','1');
+        $('#skill_5_img').css('opacity','1');
+        $('#skill_7_img').css('opacity','1')
+      },1000);
+      setTimeout(()=>{
+        $('#skill_6_img').css('opacity','1');
+        $('#skill_8_img').css('opacity','1')
+      },1500);
+      setTimeout(()=>{
+        $('#skill_9_img').css('opacity','1');
+      },2000);
+      $(document).off('scroll');
+      setTimeout(()=>{
+        $('#skills_img_block').children().css('transition','0.7s')
+      },2500);
+    }
+  })
+})
+
