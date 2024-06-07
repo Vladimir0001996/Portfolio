@@ -10,7 +10,7 @@
       <title> </title>
   </head>
   <body id="body" class="light_theme">
-    <header class="flexSBDesctop">      
+    <header class="flexSBDesctop mobileDisplayNone">      
       <img src="img/settings.png" id="header_settings">
 
 
@@ -41,7 +41,7 @@
     <div id="welcome_block" class="flexSBDesctop">
       <div id="welcome_left">
         <div id="welcome_left_cover">
-          <div id="welcome_h1_cover"><img src="img/wave.png" id="welcome_hi_emoji"><h1 id="welcome_h1" class="cent">Hi, I'm Vladimir</h1></div>
+          <div id="welcome_h1_cover"><img src="img/wave.png" id="welcome_hi_emoji"><h1 id="welcome_h1" class="cent">I'm Vladimir</h1></div>
           <h2 id="welcome_h2" class="cent">Web developer</h2>
           <p id="welcome_text">Welcome to my portfolio! <br> I'm a web developer specializing in creating responsive, user-friendly websites. I transform ideas into functional and visually appealing digital experiences. Explore my projects and let's build something amazing together!</p>
         </div>
@@ -56,7 +56,8 @@
 
   <div id="body_cover">
     <div id="about_block" class="width1000 marginCenter">
-      <h2>== About me ========</h2>
+      <h2 class="mobileDisplayNone">== About me ========</h2>
+      <h2 class="desctopDisplayNone">About me</h2>
       <p>&#128075; I'm a junior frontend developer with a background in telecommunications. I specialize in frontend development, creating landing pages, target pages, and business cards. I can handle design work and simple backend. I pay close attention to the usability and adaptability of websites for mobile devices, utilizing new image formats for faster page loading.</p>
       <p>&#128104;&#8205;&#128187; I am proficient in <span class="unicode_checkmarks"> &#10004;</span> <span class="decoration_underline"> HTML </span>, <span class="unicode_checkmarks"> &#10004; </span> <span class="decoration_underline"> CSS </span>, <span class="unicode_checkmarks">&#10004; </span> <span class="decoration_underline"> JavaScript </span>, and I am skilled in using <span class="unicode_checkmarks"> &#10004;</span> <span class="decoration_underline"> Photoshop </span> and <span class="unicode_checkmarks"> &#10004; </span> <span class="decoration_underline"> Figma </span>. </p>
       <p>&#128104;&#8205;&#128187; I work with <span class="unicode_checkmarks">&#10004;</span> <span class="decoration_underline"> jQuery </span> and have a basic <span class="unicode_checkmarks"> &#10004; </span> <span class="decoration_underline"> Vue.js </span> skills.</p> 
@@ -68,7 +69,8 @@
 
 
     <div id="project_container" class="width1000 marginCenter">
-      <h2>== Projects ========</h2>
+      <h2 class="mobileDisplayNone">== Projects ========</h2>
+      <h2 class="desctopDisplayNone">Projects</h2>
       <div id="projects_block">
         <div id="projects_scroll" class="flexSBDesctop">
           <!-- <div class="project_card">
@@ -80,7 +82,7 @@
       </div>
       <div id="projects_left_arrow"></div>
       <div id="projects_right_arrow"></div> 
-      <div id="projects_progress_bar">
+      <div id="projects_progress_bar" class="mobileDisplayNone">
         <div id="progress_point_1" class="progress_points"></div>
         <div id="progress_point_2" class="progress_points"></div>
         <div id="progress_point_3" class="progress_points"></div>
@@ -93,8 +95,8 @@
     </div>
 
     <div id="skills_block" class="width1000 marginCenter">
-      <h2>== Skills ========</h2>
-
+      <h2 class="mobileDisplayNone">== Skills ========</h2>
+      <h2 class="desctopDisplayNone">Skills</h2>
       <div id="skills_img_block">
         <img src="img/html.png" id="skill_1_img">
         <img src="img/css.png" id="skill_2_img">
@@ -110,7 +112,7 @@
       <main>
       </main>
 
-      <div id="contacts">
+      <div id="contacts" class="mobileDisplayNone">
         <a href="https://t.me/Vladimir_Bugaev" target="_blank"><div id="telegram" class="contacts_links"></div></a>
         <a href="https://wa.me/79522297864" target="_blank"><div id="whatsapp" class="contacts_links"></div></a>
         <a href="https://www.instagram.com/vladimir_bugaev.spb" target="_blank"><div id="instagram" class="contacts_links"></div></a>
@@ -119,6 +121,7 @@
       </div>
 
       <footer>
+        <h2 class="desctopDisplayNone">Contacts</h2>
         <div id="footer_box" class="width1000 marginCenter">
           <div id="footer_contacts">
             <a href="https://t.me/Vladimir_Bugaev" target="_blank"><p id="footer_telegram">+79522297864</p></a>

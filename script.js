@@ -1,6 +1,13 @@
 jQuery(document).ready(function($){
 
 
+  // mobile/desctop
+  console.log(window.innerWidth);
+  let IsMobile = false;
+  if(window.innerWidth < 1100) {
+    IsMobile = true
+  }
+
    // theme/lang switch 
    let progressPointsBackColorActive;
 
@@ -101,25 +108,30 @@ jQuery(document).ready(function($){
     }, 2500);
   }
 
-  counter = -500
-  let blocksAnimation = setInterval(()=>{
-    counter = counter + 5
-    px1 = counter + 'px'
-    px2 = counter - 150 + 'px'
-    let opacity =  1+(counter/500);
-    $('#welcome_right_cover').css('opacity' , opacity)
-    $('#welcome_h1_cover').css('top', px1).css('opacity' , opacity)
-    $('#welcome_h2').css('left', px1).css('opacity' , opacity)
-    $('#welcome_text').css('bottom', px2).css('opacity' , opacity)
-    if (counter > 1) {
-      HiAnimation()
-      $('body').css('overflow-x','visible')
-    }
-  },4)
+    counter = -500
+    let blocksAnimation = setInterval(()=>{
+      counter = counter + 5
+      px1 = counter + 'px'
+      px2 = counter - 150 + 'px'
+      let opacity =  1+(counter/500);
+      if (IsMobile == false) {
+        $('#welcome_right_cover').css('opacity' , opacity)
+        $('#welcome_h1_cover').css('top', px1).css('opacity' , opacity)
+        $('#welcome_h2').css('left', px1).css('opacity' , opacity)
+        $('#welcome_text').css('bottom', px2).css('opacity' , opacity)
+        console.log('active');
+      }
+      if (counter > 1) {
+        HiAnimation()
+        $('body').css('overflow-x','visible')
+      }
+    },4)
 
-  $('#welcome_hi_emoji').on('mouseover', ()=>{
-    HiAnimation()
-  })
+    $('#welcome_hi_emoji').on('mouseover', ()=>{
+      HiAnimation()
+    })
+
+
 
   // Projects from json
   let contentRequestURL = 'data/content.json';
@@ -197,21 +209,51 @@ jQuery(document).ready(function($){
   ProgressBar(left)
 
   $('#projects_left_arrow').on('click',()=>{
-    left = left + 500
+    console.log(IsMobile);
+    if (IsMobile == false) {
+      left = left + 500
+      if (left > 0) {
+        left = -3000
+      }
+    }
+    else {
+      left = left + 90
     if (left > 0) {
-      left = -3000
+      left = -630
+    }
     }
     ProgressBar(left)
-    $('#projects_scroll').css('left', left)
+    if (IsMobile == false) {
+      $('#projects_scroll').css('left', left)
+    }
+    else {
+      let leftVW = left + 'vw'
+      $('#projects_scroll').css('left', leftVW)
+    }
   })
 
   $('#projects_right_arrow').on('click',()=>{
-    left = left - 500;
-    if (left < -3000) {
-      left = 0
+    if (IsMobile == false) {
+      left = left - 500;
+      if (left < -3000) {
+        left = 0
+      }
     }
+    else {
+      left = left - 90;
+      if (left < -630) {
+        left = 0
+      }
+    }
+    
     ProgressBar(left)
-    $('#projects_scroll').css('left', left + 'px')
+    if (IsMobile == false) {
+      $('#projects_scroll').css('left', left)
+    }
+    else {
+      let leftVW = left + 'vw'
+      $('#projects_scroll').css('left', leftVW)
+    }
   })
 
   $('#progress_point_1').on('click',()=>{
@@ -286,31 +328,31 @@ jQuery(document).ready(function($){
   })
 
   // skills animation
-  $(document).on('scroll',()=>{
-    if (window.scrollY > $('#project_container').offset().top) {
-      console.log();
-      $('#skill_1_img').css('opacity','1')
-      setTimeout(()=>{
-        $('#skill_2_img').css('opacity','1');
-        $('#skill_4_img').css('opacity','1')
-      },500);
-      setTimeout(()=>{
-        $('#skill_3_img').css('opacity','1');
-        $('#skill_5_img').css('opacity','1');
-        $('#skill_7_img').css('opacity','1')
-      },1000);
-      setTimeout(()=>{
-        $('#skill_6_img').css('opacity','1');
-        $('#skill_8_img').css('opacity','1')
-      },1500);
-      setTimeout(()=>{
-        $('#skill_9_img').css('opacity','1');
-      },2000);
-      $(document).off('scroll');
-      setTimeout(()=>{
-        $('#skills_img_block').children().css('transition','0.7s')
-      },2500);
-    }
-  })
+  // $(document).on('scroll',()=>{
+  //   if (window.scrollY > $('#project_container').offset().top) {
+  //     // console.log();
+  //     $('#skill_1_img').css('opacity','1')
+  //     setTimeout(()=>{
+  //       $('#skill_2_img').css('opacity','1');
+  //       $('#skill_4_img').css('opacity','1')
+  //     },500);
+  //     setTimeout(()=>{
+  //       $('#skill_3_img').css('opacity','1');
+  //       $('#skill_5_img').css('opacity','1');
+  //       $('#skill_7_img').css('opacity','1')
+  //     },1000);
+  //     setTimeout(()=>{
+  //       $('#skill_6_img').css('opacity','1');
+  //       $('#skill_8_img').css('opacity','1')
+  //     },1500);
+  //     setTimeout(()=>{
+  //       $('#skill_9_img').css('opacity','1');
+  //     },2000);
+  //     $(document).off('scroll');
+  //     setTimeout(()=>{
+  //       $('#skills_img_block').children().css('transition','0.7s')
+  //     },2500);
+  //   }
+  // })
 })
 
