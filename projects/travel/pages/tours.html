@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+      <title> tours from travello travel agency </title>
+      <script defer src="../jquery-3.7.1.js"> </script>
+      <script defer src="../header.js"> </script>
+      <script defer src="tours_script.js"> </script>
+  </head>
+  <body>
+
+    <header id="header">
+      <div class="flexSB mobileFlexSB">
+        <a href="../index.html"><img src="../img/logo.png" alt="travello logo" id="header_logo"></a>
+        <div class="desctopDisplayNone" id="filters_icon"></div>
+        <div class="desctopDisplayNone" id="burger_icon"></div>
+        <div id="header_menu" class="mobileDisplayNone">
+          
+          <span id="header_menu_tours"><a href="#">tours</a>
+            <div id="tours_menu">
+              <a href="tours.html?type=hot">HOT TOURS</a>
+              <a href="tours.html?type=family">Family</a>
+              <a href="tours.html?type=cultural">Cultural</a>
+              <a href="tours.html?type=active">Active</a>
+              <a href="tours.html?type=honeymoon">Honeymoon</a>
+              <a href="tours.html?type=romantic">Romantic</a>
+              <a href="tours.html?type=beach">Beach</a>
+            </div>
+          </span>
+          <span id="header_menu_countries"><a href="#most_pop_tours">countries</a>
+            <div id="countries_menu" class="mobileDisplayNone">
+              <a href="tours.html?country=france">France</a>
+              <a href="tours.html?country=australia">Australia</a>
+              <a href="tours.html?country=maldives">Maldives</a>
+              <a href="tours.html?country=egypt">Egypt</a>
+              <a href="tours.html?country=italy">Italy</a>
+              <a href="tours.html?country=great-britan">Great Britan</a>
+              <a href="tours.html?country=brasil">Brasil</a>
+            </div>
+          </span>
+          <span><a href="../index.html#our_advantages_back">about us</a></span>
+          <span><a href="../index.html#footer">contacts</a></span>
+        </div>
+      </div>
+      <a href="../index.html"></a>
+      
+    </header>
+    <main>
+
+    </main>
+    <div id="tours_container">
+      <div id="tours_container_left" class="mobileDisplayNone">
+        <h3>filters</h3>
+        <details id="tours_filter_type">
+          <summary>type of travel</summary>
+          <input type="checkbox" name="hot" id="type_hot"><span>hot tours</span><br>
+          <input type="checkbox" name="family" id="type_famly"><span>family tours</span><br>
+          <input type="checkbox" name="cultural" id="type_party"><span>cultural tours</span><br>
+          <input type="checkbox" name="active" id="type_active"><span>active tours</span><br>
+          <input type="checkbox" name="romantic" id="type_exotic"><span>romantic tours</span><br>
+          <input type="checkbox" name="beach" id="type_beach"><span>beach tours</span><br>
+          <input type="checkbox" name="honeymoon" id="type_married"><span>honeymoon tours</span>
+        </details>
+        <details id="tours_filter_part">
+          <summary>part of the world</summary>
+          <input type="checkbox" name="europe"><span>Europe</span><br>
+          <input type="checkbox" name="north_america"><span>North America</span><br>
+          <input type="checkbox" name="south_america"><span>South America</span><br>
+          <input type="checkbox" name="australia"><span>Australia</span><br>
+          <input type="checkbox" name="asia"><span>Asia</span><br>
+          <input type="checkbox" name="africa"><span>Africa</span><br>
+          <input type="checkbox" name="oceania"><span>Oceania</span>
+        </details>
+        <details id="tours_filter_country">
+          <summary>country</summary>
+          <input type="checkbox" class="europe" name="austria"><span>Austria</span><br>
+          <input type="checkbox" class="europe" name="armenia"><span>Armenia</span><br>
+          <input type="checkbox" class="south_America" name="argentina"><span>Argentina</span><br>
+          <input type="checkbox" class="australia" name="australia"><span>Australia</span><br>
+          <input type="checkbox" class="Eerope" name="bulgaria"><span>Bulgaria</span><br>
+          <input type="checkbox" class="south_America" name="brasil"><span>Brasil</span><br>
+          <input type="checkbox" class="north_America" name="canada"><span>Canada</span><br>
+          <input type="checkbox" class="south_America" name="chili"><span>Chili</span><br>
+          <input type="checkbox" class="europe" name="croatia"><span>Croatia</span><br>
+          <input type="checkbox" class="europe" name="denmark"><span>Denmark</span><br>
+          <input type="checkbox" class="europe" name="estonia"><span>Estonia</span><br>
+          <input type="checkbox" class="africa" name="egypt"><span>Egypt</span><br>
+          <input type="checkbox" class="europe" name="france"><span>France</span><br>
+          <input type="checkbox" class="europe" name="georgia"><span>Georgia</span><br>
+          <input type="checkbox" class="europe" name="germany"><span>Germany</span><br>
+          <input type="checkbox" class="europe" name="great_britan"><span>Great Britan</span><br>
+          <input type="checkbox" class="europe" name="italy"><span>Italy</span><br>
+          <input type="checkbox" class="asia" name="india"><span>India</span><br>
+          <input type="checkbox" class="asia" name="indonesia"><span>Indonesia</span><br>
+          <input type="checkbox" class="europe" name="ireland"><span>Ireland</span><br>
+          <input type="checkbox" class="africa" name="kamerun"><span>Kamerun</span><br>
+          <input type="checkbox" class="europe" name="latvia"><span>Latvia</span><br>
+          <input type="checkbox" class="asia" name="maldives"><span>Maldives</span><br>
+          <input type="checkbox" class="asia" name="malaysia"><span>Malaysia</span><br>
+          <input type="checkbox" class="south_America" name="mexico"><span>Mexico</span><br>
+          <input type="checkbox" class="europe" name="netherlands"><span>Netherlands</span><br>
+          <input type="checkbox" class="europe" name="portugal"><span>Portugal</span><br>
+          <input type="checkbox" class="south_America" name="peru"><span>Peru</span><br>
+          <input type="checkbox" class="europe" name="poland"><span>Poland</span><br>
+          <input type="checkbox" class="europe" name="russia"><span>Russia</span><br>
+          <input type="checkbox" class="europe" name="romania"><span>Romania</span><br>
+          <input type="checkbox" class="asia" name="sri_Lanka"><span>Sri Lanka</span><br>
+          <input type="checkbox" class="europe" name="spain"><span>Spain</span><br>thailand
+          <input type="checkbox" class="asia" name="thailand"><span>Thailand</span><br>
+          <input type="checkbox"><span>Other</span>
+        </details>
+      </div>
+      <div id="tours_container_right">
+        <!-- <div class="tour_box type side country" id="id">
+          <h3>header</h3>
+          <img src="../img/tours_img/" alt="image of tour">
+          <p>short_discription</p>
+        </div> -->
+      </div>
+    </div>
+    <footer id="footer">
+      <h2 class="center center_mob">contacts</h2>
+      <div class="flexSB">
+        <div id="footer_left">
+          <a href="https://www.instagram.com"><div id="instagram" class="social_links">Instagram</div></a>
+          <a href="https://www.telegram.org"><div id="Telegram" class="social_links">Telegram</div></a>
+          <a href="https://www.whatsapp.com"><div id="WhatsApp" class="social_links">WhatsApp</div></a>
+          <div id="E-mail" class="social_links">ourMail@gmail.com</div>
+          <p  class="center_mob">adress:</p>
+          <p>Columbus Ave 537 San-Francisco CA</p>
+        </div>
+        <div id="footer_right">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255.52428432177442!2d-122.4100807201216!3d37.799918815669045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580f175cc240b%3A0x15d0ddd06c9c1ad7!2zNTM3IENvbHVtYnVzIEF2ZSwgU2FuIEZyYW5jaXNjbywgQ0EgOTQxMzMsINCh0KjQkA!5e0!3m2!1sru!2slk!4v1710076843218!5m2!1sru!2slk" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <!-- <div id="footer_right" class="desctopDisplayNone">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255.52428432177442!2d-122.4100807201216!3d37.799918815669045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580f175cc240b%3A0x15d0ddd06c9c1ad7!2zNTM3IENvbHVtYnVzIEF2ZSwgU2FuIEZyYW5jaXNjbywgQ0EgOTQxMzMsINCh0KjQkA!5e0!3m2!1sru!2slk!4v1710076843218!5m2!1sru!2slk" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div> -->
+      </div>
+
+
+      <div id="feedback" class="mobileDisplayNone">
+        <div id="feedback_text">
+          <div id="feedback_text_close_button">&#10540;</div>
+          <p></p>
+        </div>
+        <div id="feedback_icon">
+        </div>
+        <div id="feedback_form">
+          <div id="feedback_form_close_button">&#10540;</div>
+          <input type="text" placeholder="Name"><br>
+          <input type="tel" placeholder="Phone number"><br>
+          <textarea type="text" placeholder="Message" id="feedback_text_input"></textarea> 
+          <div id="feedback_form_send_button"> send</div>
+        </div>
+      </div>
+      <div id="up_button"></div>
+
+    </footer>
+    
+  </body>
+</html>
