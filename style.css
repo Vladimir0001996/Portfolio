@@ -603,6 +603,7 @@ html, body {
     background-size: 
     90vw,
     200vw;
+    overflow: hidden;
   }
 
   #settings_block {
@@ -727,7 +728,7 @@ html, body {
   .project_card {
     width: 85vw;
     margin: 0 2.5vw;
-    height: 55vh;
+    height: 65vh;
     border: 4px solid var(--frames);
     box-sizing: border-box;
     padding: 2.5vw;
@@ -790,8 +791,8 @@ html, body {
 
 
   #project_full_discription_cover {
-    width: 100vw;
-    height: 100vh;
+    width: 110vw;
+    height: 110vh;
     background-color: var(--back_07);
     position: fixed;
     top: 0;
@@ -812,7 +813,7 @@ html, body {
   }
 
   #project_full_discription {
-    width: 90vw;
+    width: 100vw;
     height: 100vh;
     margin: 0 auto;
     background-color: var(--welcome_back);
@@ -820,7 +821,7 @@ html, body {
   }
 
   #project_full_discription > img {
-    width: 90vw;
+    width: 100vw;
   }
 
   #project_full_discription > h3 {

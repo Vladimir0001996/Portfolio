@@ -179,6 +179,7 @@ jQuery(document).ready(function($){
   if (IsMobile == true) {
     $('#project_full_discription_close_button').on('click',()=>{
       $('#project_full_discription_cover').css('display','none')
+      $('#body').css('overflow','visible')
     })
   }
   
