@@ -1,0 +1,697 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* font-family: 'Open Sans';
+font-family: 'Protest Revolution'; */
+
+  /* font-family: "Roboto", sans-serif;
+  font-family: "Radio Canada Big", sans-serif; */
+
+
+
+.light_theme {
+  background-color: #cfcbb4;
+  color: rgb(34, 33, 27);
+  --elems_color: #2f281a;
+  --welcome_frame_back: rgba(47, 40, 26, 0.3);
+  --background: #cfcbb4;
+  --background07: rgba(207, 203, 180, 0.7);
+  --gallery_frame_back: rgba(47, 40, 26, 0.3);
+}
+
+.dark_theme {
+  background-color: rgb(29, 29, 24);
+  color: #cfcbb4;
+  --elems_color: #746a57;
+  --welcome_frame_back: rgba(189, 181, 161, 0.9);
+  --gallery_frame_back: rgba(49, 47, 42, 0.9);
+
+}
+
+.marginCenter {
+  margin: 0 auto;
+}
+
+/* desctop  */
+@media (min-width: 1000px) {
+
+
+  .desctopDisplayNone {
+    display: none;
+  }
+
+  h2 {
+    font-size: 50px;
+  }
+
+  .flexSBDesctop {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .width1000 {
+    width: 1000px;
+  }
+
+  header {
+    padding: 5px;
+    height: 70px;
+  }
+
+  #header_box {
+    font-family: "Radio Canada Big", sans-serif;
+    font-size: 20px;
+  }
+
+  #chart_box {
+    height: 24px;
+    margin-top: 10px;
+    
+  }
+
+  #chart_box > div {
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+    /* background-image: url(img/coins_ico_sheet_dark.png); */
+  }
+
+  #btc {
+    background-position: top left;
+  }
+
+  #eth {
+    background-position: top -24px left;
+  }
+
+  #sol {
+    background-position: top -49px left;
+  }
+
+  #bnb {
+    background-position: top -74px left;
+  }
+
+  #ton {
+    background-position: top -99px left;
+  }
+
+  #xrp {
+    background-position: top -124px left;
+  }
+
+  #usdt {
+    background-position: top -149px left;
+  }
+
+ 
+
+  #header_box > div {
+    font-family: "Radio Canada Big", sans-serif;
+    font-size: 20px;
+  }
+
+  #header_box > div:hover {
+    border: 2px solid var(--elems_color);
+  }
+
+  #welcome_container {
+    height: calc(100vh - 70px);
+    position: relative;
+    margin-top: 50px;
+  }
+
+  #welcome_name {
+    position: absolute;
+    top: 150px;
+    left: 0;
+    font-family: "Radio Canada Big";
+    line-height: 150%;
+  }
+
+  #second_name {
+    margin-left: 50px;
+  }
+
+  #welcome_tagline {
+    font-size: 50px;
+    position: absolute;
+    top: 50px;
+    right: -100px;
+    font-family: "Radio Canada Big";
+    line-height: 150%;
+  }
+
+  #welcome_img {
+    width: 400px;
+    position: absolute;
+    top: 30px;
+    left: 300px;
+
+  }
+
+  #welcome_photo_frame {
+    position: absolute;
+    top: 0;
+    left: 250px;
+    width: 500px;
+    height: 500px;
+    z-index: -100;
+    border: 20px solid var(--elems_color);
+    opacity: 0.8;
+    background-color: var(--welcome_frame_back);
+  }
+
+  #skills > h2  {
+  text-align: center;
+  }
+
+  #skills_box {
+    position: relative;
+
+  }
+
+  #skills_box > p{
+    font-size: 20px;
+    line-height: 150%;
+    font-family: 'Roboto';
+  }
+
+  #skills_img {
+    width: 400px;
+    position: absolute;
+    top: 50px;
+    right: 0;
+  }
+
+  #certificate1 {
+    margin-top: -150px;
+    rotate: -2deg;
+  }
+
+  #certificate2 {
+    width: 400px;
+  }
+
+  #skills_img > img {
+    width: 400px;
+  }
+
+  #skills1 {
+    width: 600px;
+  }
+
+  #skills2 {
+    width: 600px;
+
+  }
+
+  #skills3 {
+    width: 600px;
+  }
+
+  #skills4 {
+    width: 600px;
+  }
+
+  #skills5 {
+    width: 600px;
+  }
+
+  #services {
+    position: relative;
+  }
+
+  #services > h2 {
+    text-align: center;
+    margin: 90px 0;
+  }
+
+  #services_gallery {
+    width: 860px;
+    height: 620px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  #services_gallery_left_arrow {
+    width: 50px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    top: 400px;
+    background-image: url(img/left.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  #services_gallery_right_arrow {
+    width: 50px;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    top: 400px;
+    background-image: url(img/right.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+
+  #services_gallery_scroll {
+    display: flex;
+    justify-content: left;
+    position: absolute;
+    left: 0;
+    transition: 0.5s;
+  }
+
+  #services_gallery_scroll > div > h3{
+    height: 70px;
+  }
+
+  #services_gallery_scroll > div > p{
+    font-size: 20px;
+    font-family: 'Roboto';
+    padding: 10px;
+  }
+
+  .services_gallery_card {
+    width: 400px;
+    border: 10px solid var(--elems_color);
+    background-color: var(--gallery_frame_back);
+    height: 550px;
+    margin: 15px;
+    box-sizing: border-box;
+  }
+
+  .services_gallery_card > h3 {
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .services_gallery_card > img{
+    width: 380px;
+  }
+
+  #services_progress_bar {
+    width: 100px;
+    position: absolute;
+    top: 600px;
+    left: 380px;
+
+  }
+
+  .progress_bar_point {
+    width: 10px;
+    height: 10px;
+    border: 2px solid var(--elems_color);
+    border-radius: 10px;
+  }
+
+  #services_full_discription_cover {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--background07);
+    display: none;
+  }
+
+  #services_full_discription {
+    width: 500px;
+    border: 5px solid var(--elems_color);
+    margin: 100px auto;
+    background-color: var(--background);
+  }
+
+  #services_full_discription > h3 {
+    text-align: center;
+    font-size: 25px;
+  }
+
+  #services_full_discription > img {
+    width: 500px;
+
+  }
+
+  #services_full_discription > p {
+    font-size: 18px;
+  }
+
+  #services_full_discription_close_button {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    border: 2px solid black;
+    padding: 10px;
+  }
+
+  #reviews > h2 {
+    text-align: center;
+    margin: 90px 0;
+  }
+
+  #reviews_block {
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-gap: 10px;
+    height: 280px;
+    overflow: hidden;
+  }
+
+  .reviews_card {
+    border: 5px solid var(--elems_color);
+    padding: 10px;
+    height: 250px;
+  }
+
+  .reviews_card > p {
+    font-size: 18px;
+    line-height: 150%;
+  }
+
+  .reviews_card_header {
+    width: 200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+  }
+
+  .reviews_card_header > p {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    margin: 5px;
+  }
+
+  .reviews_card_img {
+    width: 50px;
+    border: 3px solid var(--elems_color);
+    border-radius: 200px;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  #more_reviews {
+    width: 100px;
+    height: 30px;
+    border: 4px solid var(--elems_color);
+    border-radius: 5px;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: 35px;
+    transition: 0.3s;
+  }
+
+  #more_reviews:hover {
+    background-color: var(--welcome_frame_back);
+    transition: 0.3s;
+  }
+
+  #support {
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+    width: 70px;
+    height: 70px;
+    z-index: 100;
+  }
+
+  #support_main_img {
+    z-index: 100;
+    width: 70px;
+    position: absolute;
+  }
+
+  .support_img {
+    width: 50px;
+  }
+
+  .support_links {
+    position: absolute;
+    z-index: 50;
+    transition: 1s;
+    top: 10px;
+    left: 10px;
+  }
+
+  #footer_cutaway {
+    border: 15px solid var(--elems_color);
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    padding: 10px;
+  }
+
+  #footer_cutaway > h3 {
+    font-size: 35px;
+    text-align: center;
+    margin-top: 10px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  .footer_links {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding-left: 50px;
+    padding-top: 10px;
+    height: 40px;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    margin-left: 40px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .footer_links:hover {
+    text-decoration: underline;
+    font-weight: 600;
+  }
+
+
+  #footer_img {
+    width: 200px;
+    grid-column-start: 3;
+    grid-row-start: 2;
+    grid-row-end: 6;
+    margin: 0 10px 10px 0;
+  }
+
+  #footer_phone {
+    background-image: url(img/phone.png);
+  }
+
+  #footer_telegram {
+    background-image: url(img/telegram2.png);
+  }
+
+  #footer_whatsapp {
+    background-image: url(img/whatsapp2.png);
+  }
+
+  #footer_mail {
+    background-image: url(img/e-mail.png);
+  }
+
+}
+
+@media (max-width: 1000px) {
+
+  .flexSBMobile {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .flexSBMobile {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .mobileDisplayNone {
+    display: none;
+  }
+
+  .mobilePadding {
+    padding: 0 3vw;
+  }
+
+  h2 {
+    font-size: 10vw;
+    text-align: center;
+  }
+
+  #chart_box {
+    padding: 3vh;
+    font-size: 5vw;
+  }
+
+  #chart_box > div {
+    padding-left: 7vw;
+    background-size: 5vw;
+    background-repeat: no-repeat;
+  }
+
+  #btc {
+    background-position: top left;
+  }
+
+  #eth {
+    background-position: top -6vw left;
+  }
+
+  #sol {
+    background-position: top -12vw left;
+  }
+
+  #welcome_container {
+    position: relative;
+    height: calc(100vh - 10vw);
+  }
+
+  #welcome_name {
+    font-size: 15vw;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  #welcome_img {
+    width: 90vw;
+    z-index: 100;
+  }
+
+  #welcome_tagline {
+    position: absolute;
+    top: 60vh;
+    width: 100vw;
+    font-size: 10vw;
+    text-align: center;
+    background-color: var(--background);
+    box-shadow: 0 0 5vw 5vw var(--gallery_frame_back);
+    z-index: 2000;
+  }
+ 
+
+
+  #skills {
+    text-align: center;
+  }
+
+  #skills_box {
+    font-size: 5vw;
+  }  
+
+  #certificate1 {
+    width: 60vw;
+  }
+
+  #certificate2 {
+    width: 60vw;
+  }
+
+  #services_gallery {
+    width: 94vw;
+    overflow: hidden;
+    position: relative;
+    height: 65vh;
+  }
+
+  #services_gallery_scroll {
+    display: flex;
+    justify-content: left;
+    position: absolute;
+    left: 0;
+  }
+  .services_gallery_card {
+    width: 94vw;
+    box-sizing: border-box;
+    border: 1vw solid var(--elems_color);
+    margin-right: 5vw;
+  }
+
+  .services_gallery_card > img {
+    width: 92vw;
+  }
+
+  .services_gallery_card >  h3 {
+    font-size: 7vw;
+    height: 15vw;
+    text-align: center;
+  }
+
+  .services_gallery_card > p {
+    font-size: 5vw;
+  }
+
+  #services_arrows {
+    width: 30vw;
+    position: absolute;
+    top: 55vh;
+    left: 30vw;
+  }
+
+  #footer_cutaway {
+    box-sizing: border-box;
+    width: 88vw;
+    border: 2vw solid var(--elems_color);
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    padding: 2vw;
+    margin-bottom: 7vh;
+  }
+
+  .footer_links {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-size: 10vw;
+    padding: 2vw 13vw;
+    background-repeat: no-repeat;
+    font-size: 5vw;
+
+  }
+
+  #footer_cutaway > h3{
+    font-size: 7vw;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  #footer_img {
+    width: 35vw;
+    grid-row-start: 2;
+    grid-row-end: 6;
+    grid-column-start: 2;
+    margin-top: -5vw;
+  }
+
+  #footer_phone {
+    background-image: url(img/phone.png);
+  }
+
+  #footer_telegram {
+    background-image: url(img/telegram2.png);
+  }
+
+  #footer_whatsapp {
+    background-image: url(img/whatsapp2.png);
+  }
+
+  #footer_mail {
+    background-image: url(img/e-mail.png);
+  }
+
+}
+
+
