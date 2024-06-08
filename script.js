@@ -318,12 +318,25 @@ jQuery(document).ready(function($){
     console.log('click');
     $('#settings_block').toggleClass('displayNone')
     if ($('#settings_block').css('display') == 'none') {
-      $('#settings_block').css('display','flex')
-      $('header').css('width','610px')
+      if (IsMobile == false) {
+        $('#settings_block').css('display','flex')
+        $('header').css('width','610px')  
+      }
+      else {
+        $('#settings_block').css('display','block')
+        $('header').css('height','30vw')  
+      }
     }
     else {
-      $('#settings_block').css('display','none')
-      $('header').css('width','500px')
+      if (IsMobile == false) {
+        $('#settings_block').css('display','none')
+        $('header').css('width','500px')
+      }
+      else {
+        $('#settings_block').css('display','none')
+        $('header').css('height','7vw')  
+      }
+
     }
   })
 
