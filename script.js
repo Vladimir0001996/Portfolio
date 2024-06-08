@@ -341,31 +341,31 @@ jQuery(document).ready(function($){
   })
 
   // skills animation
-  // $(document).on('scroll',()=>{
-  //   if (window.scrollY > $('#project_container').offset().top) {
-  //     // console.log();
-  //     $('#skill_1_img').css('opacity','1')
-  //     setTimeout(()=>{
-  //       $('#skill_2_img').css('opacity','1');
-  //       $('#skill_4_img').css('opacity','1')
-  //     },500);
-  //     setTimeout(()=>{
-  //       $('#skill_3_img').css('opacity','1');
-  //       $('#skill_5_img').css('opacity','1');
-  //       $('#skill_7_img').css('opacity','1')
-  //     },1000);
-  //     setTimeout(()=>{
-  //       $('#skill_6_img').css('opacity','1');
-  //       $('#skill_8_img').css('opacity','1')
-  //     },1500);
-  //     setTimeout(()=>{
-  //       $('#skill_9_img').css('opacity','1');
-  //     },2000);
-  //     $(document).off('scroll');
-  //     setTimeout(()=>{
-  //       $('#skills_img_block').children().css('transition','0.7s')
-  //     },2500);
-  //   }
-  // })
+  $(document).on('scroll',()=>{
+    if (window.scrollY > $('#project_container').offset().top) {
+      // console.log();
+      $('#skill_1_img').css('opacity','1')
+      setTimeout(()=>{
+        $('#skill_2_img').css('opacity','1');
+        $('#skill_4_img').css('opacity','1')
+      },500);
+      setTimeout(()=>{
+        $('#skill_3_img').css('opacity','1');
+        $('#skill_5_img').css('opacity','1');
+        $('#skill_7_img').css('opacity','1')
+      },1000);
+      setTimeout(()=>{
+        $('#skill_6_img').css('opacity','1');
+        $('#skill_8_img').css('opacity','1')
+      },1500);
+      setTimeout(()=>{
+        $('#skill_9_img').css('opacity','1');
+      },2000);
+      $(document).off('scroll');
+      setTimeout(()=>{
+        $('#skills_img_block').children().css('transition','0.7s')
+      },2500);
+    }
+  })
 })
 
