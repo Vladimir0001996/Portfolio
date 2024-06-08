@@ -175,6 +175,14 @@ jQuery(document).ready(function($){
     }
   }
 
+  // full discription close button
+  if (IsMobile == true) {
+    $('#project_full_discription_close_button').on('click',()=>{
+      $('#project_full_discription_cover').css('display','none')
+    })
+  }
+  
+
   // projects gallery progress points
   function ProgressBar (left) {
     $('.progress_points').css('background-color', 'transparent')
@@ -324,7 +332,7 @@ jQuery(document).ready(function($){
       }
       else {
         $('#settings_block').css('display','block')
-        $('header').css('height','30vw')  
+        $('header').css('height','40vw')  
       }
     }
     else {
