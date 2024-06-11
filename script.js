@@ -2,14 +2,20 @@ jQuery(document).ready(function($){
 
 
   // mobile/desctop
-  console.log(window.innerWidth);
+  // console.log(window.innerWidth);
   let IsMobile = false;
   if(window.innerWidth < 1100) {
     IsMobile = true
+    $('#projects_left_arrow').removeAttr('id')
+    $('#projects_right_arrow').removeAttr('id')
+    $('#projects_mobile_arrows')[0].children[0].setAttribute('id','projects_left_arrow')
+    $('#projects_mobile_arrows')[0].children[1].setAttribute('id','projects_right_arrow')
   }
 
 
-  alert(window.innerHeight);
+
+
+  // alert(window.innerHeight);
 
    // theme/lang switch 
    let progressPointsBackColorActive;
@@ -39,6 +45,7 @@ jQuery(document).ready(function($){
     $('#mail').css('background-image','url(img/e-mail_dark.webp)')
     $('#footer_mail').css('background-image','url(img/e-mail_dark.webp)')
     $('#header_settings').attr('src','img/settings_dark.webp')
+
     progressPointsBackColorActive = '#e6eceb'
   }
 
