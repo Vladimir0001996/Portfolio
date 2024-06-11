@@ -549,6 +549,26 @@ html, body {
 
 }
 
+@media (100px <= width <= 200px) {
+  /* #test > span {
+    display: none;
+  } */
+  #w200{
+    /* display: inline; */
+    color: red;
+  }
+}
+
+@media (200px <= width <= 300px) {
+  /* #test > span {
+    display: none;
+  } */
+  #w200{
+    /* display: inline; */
+    color: red;
+  }
+}
+
 @media (300px <= width <= 400px) {
   /* #test > span {
     display: none;
