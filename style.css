@@ -148,8 +148,8 @@ html, body {
     left: 0;
     z-index: -100;
     background: 
-    url(img/3.2.png) 56vw 20% no-repeat,
-    url(img/4.3.png) -17vw 50% no-repeat,
+    url(img/3.2.webp) 56vw 20% no-repeat,
+    url(img/4.3.webp) -17vw 50% no-repeat,
     var(--welcome_back) ;
     background-size: 
     500px,
@@ -198,7 +198,7 @@ html, body {
   }
 
   #welcome_h2 {
-    background-image: url(img/programmer.png);
+    background-image: url(img/programmer.webp);
     background-size: 50px;
     background-repeat: no-repeat;
     padding: 0 0 0 60px;
@@ -251,7 +251,7 @@ html, body {
 
   #body_cover {
     margin-top: 100vh;
-    background-image: url(img/light_back_v4.jpg);
+    background-image: url(img/light_back_v4.webp);
     background-size: 100%;
     z-index: 2000;
     box-shadow: 0 0 20px var(--frames);
@@ -329,7 +329,7 @@ html, body {
   #projects_left_arrow {
     width: 50px;
     height: 100px;
-    background-image: url(img/left.png);
+    background-image: url(img/left.webp);
     background-size: 50px;
     background-repeat: no-repeat;
     position: absolute;
@@ -340,7 +340,7 @@ html, body {
   #projects_right_arrow {
     width: 50px;
     height: 100px;
-    background-image: url(img/right.png);
+    background-image: url(img/right.webp);
     background-size: 50px;
     background-repeat: no-repeat;
     position: absolute;
@@ -460,7 +460,7 @@ html, body {
   }
   
   #contacts_img {
-    background-image: url(img/phone2.png);
+    background-image: url(img/phone2.webp);
     background-size: 70px;
     width: 70px;
     height: 70px;
@@ -470,22 +470,22 @@ html, body {
   }
 
   #telegram {
-    background-image: url(img/telegram.png);
+    background-image: url(img/telegram.webp);
     transition: 1.8s;
   }
 
   #whatsapp {
-    background-image: url(img/whatsapp.png);
+    background-image: url(img/whatsapp.webp);
     transition: 1.4s;
   }
 
   #instagram {
-    background-image: url(img/instagram.png);
+    background-image: url(img/instagram.webp);
     transition: 0.9s;
   }
 
   #mail {
-    background-image: url(img/e-mail.png);
+    background-image: url(img/e-mail.webp);
     transition: 0.5s;
   }
 
@@ -523,19 +523,19 @@ html, body {
   }
 
   #footer_telegram {
-    background-image: url(img/telegram.png);
+    background-image: url(img/telegram.webp);
   }
 
   #footer_whatsapp {
-    background-image: url(img/whatsapp.png);
+    background-image: url(img/whatsapp.webp);
   }
 
   #footer_instagram {
-    background-image: url(img/instagram.png);
+    background-image: url(img/instagram.webp);
   }
 
   #footer_mail {
-    background-image: url(img/e-mail.png);
+    background-image: url(img/e-mail.webp);
   }
 
   #footer_menu {
@@ -807,7 +807,7 @@ html, body {
     right: 5vh;
     width: 5vh;
     height: 5vh;
-    background-image: url(img/close.png);
+    background-image: url(img/close.webp);
     background-size: 5vw;
     background-repeat: no-repeat;
   }
@@ -907,19 +907,19 @@ html, body {
 
 
   #footer_telegram {
-    background-image: url(img/telegram.png);
+    background-image: url(img/telegram.webp);
   }
 
   #footer_whatsapp {
-    background-image: url(img/whatsapp.png);
+    background-image: url(img/whatsapp.webp);
   }
 
   #footer_instagram {
-    background-image: url(img/instagram.png);
+    background-image: url(img/instagram.webp);
   }
 
   #footer_mail {
-    background-image: url(img/e-mail.png);
+    background-image: url(img/e-mail.webp);
   }
 
   #footer_menu {

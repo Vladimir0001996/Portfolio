@@ -8,6 +8,9 @@ jQuery(document).ready(function($){
     IsMobile = true
   }
 
+
+  alert(window.innerHeight);
+
    // theme/lang switch 
    let progressPointsBackColorActive;
 
@@ -15,12 +18,12 @@ jQuery(document).ready(function($){
     console.log('let dark');
     $('body').addClass('dark_theme')
     $('body').removeClass('light_theme')
-    $('#body_cover').css('background-image','url(img/dark_back_v2.jpg)')
-    $('#projects_right_arrow').css('background-image','url(img/right_dark.png)')
-    $('#projects_left_arrow').css('background-image','url(img/left_dark.png)')
-    $('#skill_1_img').attr('src','img/html_dark.png')
-    $('#skill_2_img').attr('src','img/css_dark.png')
-    $('#skill_3_img').attr('src','img/js_dark.png')
+    $('#body_cover').css('background-image','url(img/dark_back_v2.webp)')
+    $('#projects_right_arrow').css('background-image','url(img/right_dark.webp)')
+    $('#projects_left_arrow').css('background-image','url(img/left_dark.webp)')
+    $('#skill_1_img').attr('src','img/html_dark.webp')
+    $('#skill_2_img').attr('src','img/css_dark.webp')
+    $('#skill_3_img').attr('src','img/js_dark.webp')
     $('#theme_light').css('color','#848484')
     $('#theme_dark').hover(()=>{
       $('#theme_dark').css('color','#282879')
@@ -33,9 +36,9 @@ jQuery(document).ready(function($){
       $('#theme_light').css('color','#848484')
     })
     $('#theme_dark').css('color','#282879')
-    $('#mail').css('background-image','url(img/e-mail_dark.png)')
-    $('#footer_mail').css('background-image','url(img/e-mail_dark.png)')
-    $('#header_settings').attr('src','img/settings_dark.png')
+    $('#mail').css('background-image','url(img/e-mail_dark.webp)')
+    $('#footer_mail').css('background-image','url(img/e-mail_dark.webp)')
+    $('#header_settings').attr('src','img/settings_dark.webp')
     progressPointsBackColorActive = '#e6eceb'
   }
 
@@ -43,12 +46,12 @@ jQuery(document).ready(function($){
     console.log('let light');
     $('body').removeClass('dark_theme')
     $('body').addClass('light_theme')
-    $('#body_cover').css('background-image','url(img/light_back_v4.jpg)')
-    $('#projects_right_arrow').css('background-image','url(img/right.png)')
-    $('#projects_left_arrow').css('background-image','url(img/left.png)')
-    $('#skill_1_img').attr('src','img/html.png')
-    $('#skill_2_img').attr('src','img/css.png')
-    $('#skill_3_img').attr('src','img/js.png')
+    $('#body_cover').css('background-image','url(img/light_back_v4.webp)')
+    $('#projects_right_arrow').css('background-image','url(img/right.webp)')
+    $('#projects_left_arrow').css('background-image','url(img/left.webp)')
+    $('#skill_1_img').attr('src','img/html.webp')
+    $('#skill_2_img').attr('src','img/css.webp')
+    $('#skill_3_img').attr('src','img/js.webp')
     $('#theme_light').css('color','#ffff00')
     $('#theme_light').hover(()=>{
       $('#theme_light').css('color','#ffff00')
@@ -61,9 +64,9 @@ jQuery(document).ready(function($){
     },()=>{
       $('#theme_dark').css('color','#848484')
     })
-    $('#mail').css('background-image','url(img/e-mail.png)')
-    $('#footer_mail').css('background-image','url(img/e-mail.png)')
-    $('#header_settings').attr('src','img/settings.png')
+    $('#mail').css('background-image','url(img/e-mail.webp)')
+    $('#footer_mail').css('background-image','url(img/e-mail.webp)')
+    $('#header_settings').attr('src','img/settings.webp')
     progressPointsBackColorActive = '#1d2020'
   }
   $('#theme_light').on('click', ()=>{
@@ -83,6 +86,7 @@ jQuery(document).ready(function($){
   }
 
   // welcome Animation
+  let iterationCounter = 0;
   function HiAnimation () {
     clearInterval (blocksAnimation);
     let rotation = 0
@@ -101,10 +105,12 @@ jQuery(document).ready(function($){
         }
       }
       let deg = rotation + 'deg'
+      iterationCounter ++;
       $('#welcome_hi_emoji').css('rotate', deg)
-    },5)
+    },15)
     setTimeout(() => {
       clearInterval(welcomeAnimaiton)
+      console.log(iterationCounter);
     }, 2500);
   }
 
@@ -125,7 +131,7 @@ jQuery(document).ready(function($){
         HiAnimation()
         $('body').css('overflow-x','visible')
       }
-    },4)
+    },10)
 
     $('#welcome_hi_emoji').on('mouseover', ()=>{
       HiAnimation()
