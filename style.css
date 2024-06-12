@@ -37,7 +37,7 @@ html, body {
 }
 
 /* desctop  */
-@media (min-width: 800px) {
+@media (min-width: 900px) {
 
  
 
@@ -739,7 +739,7 @@ html, body {
 
 
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
 
   body {
     background-color: var(--welcome_back)
