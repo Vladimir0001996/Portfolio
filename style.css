@@ -37,7 +37,10 @@ html, body {
 }
 
 /* desctop  */
-@media (min-width: 1100px) {
+@media (min-width: 800px) {
+
+ 
+
 
   body {
     overflow-x: hidden;
@@ -127,7 +130,7 @@ html, body {
     display: none;
   }
 
-  #theme_light {
+  /* #theme_light {
     font-size: 30px;
     color: #848484;
     line-height: 50%;
@@ -138,108 +141,293 @@ html, body {
     font-size: 35px;
     color: #848484;
     line-height: 50%;
+  } */
+
+
+  #settings_block > div {
+    display: flex;
+    justify-content: space-around;
+    width: 110px;
   }
 
-  #welcome_block_cover {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -100;
-    background: 
-    url(img/3.2.webp) 56vw 20% no-repeat,
-    url(img/4.3.webp) -17vw 50% no-repeat,
-    var(--welcome_back) ;
-    background-size: 
-    500px,
-    70vw;
-  }
-
-  #welcome_block {
-    max-width: 1200px;
-    height: 100vh;
-    padding-top: 70px;
-    margin: 0 auto;
-    box-sizing: border-box;
-  }
-
-  #welcome_left {
-    padding-top: 50px;
-    width: 500px;
-    position: relative;
-  }
-
-  #welcome_left_cover {
-    width: 510px;
-    position: absolute;
-    left: 0;
-    top: 100px;
-    height: 300px;
-  }
-
-  #welcome_h1 {
-    display: inline;
-    font-family: "Merriweather";
-    font-weight: 700;
-    padding-left: 10px;
-  }
-
-  #welcome_hi_emoji {
-    width: 50px;
-    display: inline;
-    transform-origin: bottom right;
-    rotate: 0;
-  }
-
-  #welcome_h1_cover {
-    position: absolute;
-    top: -500px;
-  }
-
-  #welcome_h2 {
-    background-image: url(img/programmer.webp);
-    background-size: 50px;
+  #theme_light {
+    width: 20px;
+    height: 20px;
+    background-size: 20px;
     background-repeat: no-repeat;
-    padding: 0 0 0 60px;
-    position: absolute;
-    left: -500px;
-    top: 85px;
-    font-family: "Merriweather";
-    font-weight: 700;
   }
 
-  #welcome_text {
-    position: absolute;
-    bottom: -500px;
-    font-family: "Merriweather";
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 180%;
-  }
-
-  #welcome_right {
-    width: 500px;
-    position: relative;
-    /* left: 0; */
-  }
-
-  #welcome_right_cover {
-    width: 500px;
-    position: absolute;
-    bottom: 0;
-    opacity: 0;
-    /* background-image: url(img/111.png);
-    background-size: 500px;
+  #theme_dark {
+    width: 20px;
+    height: 20px;
+    background-size: 15px;
     background-repeat: no-repeat;
-    background-position: top ; */
+    background-position: center;
   }
 
-  #welcome_img {
-    width: 500px;
+/* 
+  #theme_light {
   }
 
-  #laptop_cover {
+  #theme_dark {
+    font-size: 35px;
+    color: #848484;
+    line-height: 50%;
+  } */
+  
+
+
+
+
+
+
+
+
+
+
+
+  @media (min-width: 1200px) {
+
+    #welcome_block_cover {
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -100;
+      background: 
+      url(img/3.2.webp) 56vw 20% no-repeat,
+      url(img/4.3.webp) -17vw 50% no-repeat,
+      var(--welcome_back) ;
+      background-size: 
+      500px,
+      70vw;
+    }
+
+    #welcome_block {
+      max-width: 1200px;
+      height: 100vh;
+      padding-top: 70px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    #welcome_left {
+      padding-top: 50px;
+      width: 500px;
+      position: relative;
+    }
+
+    #welcome_left_cover {
+      width: 510px;
+      position: absolute;
+      left: 0;
+      top: 100px;
+      height: 300px;
+    }
+
+    #welcome_h1 {
+      display: inline;
+      font-family: "Merriweather";
+      font-weight: 700;
+      padding-left: 10px;
+    }
+
+    #welcome_hi_emoji {
+      width: 50px;
+      display: inline;
+      transform-origin: bottom right;
+      rotate: 0;
+    }
+
+    #welcome_h1_cover {
+      position: absolute;
+      top: -500px;
+    }
+
+    #welcome_h2 {
+      background-image: url(img/programmer.webp);
+      background-size: 50px;
+      background-repeat: no-repeat;
+      padding: 0 0 0 60px;
+      position: absolute;
+      left: -500px;
+      top: 85px;
+      font-family: "Merriweather";
+      font-weight: 700;
+    }
+
+    #welcome_text {
+      position: absolute;
+      bottom: -500px;
+      font-family: "Merriweather";
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 180%;
+    }
+
+    #welcome_right {
+      width: 500px;
+      position: relative;
+    }
+
+    #welcome_right_cover {
+      width: 500px;
+      position: absolute;
+      bottom: 0;
+      opacity: 0;
+    }
+
+    #welcome_img {
+      width: 450px;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+  @media (max-width: 1200px) {
+
+    #welcome_block_cover {
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -100;
+      background: 
+      url(img/3.2.webp) 50vw 35% no-repeat,
+      url(img/4.3.webp) -17vw 50% no-repeat,
+      var(--welcome_back) ;
+      background-size: 
+      400px,
+      80vw;
+    }
+
+  
+    #welcome_block {
+      max-width: 800px;
+      height: 100vh;
+      padding-top: 70px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    #welcome_left {
+      padding-top: 50px;
+      width: 350px;
+      position: relative;
+    }
+
+    #welcome_left_cover {
+      width: 350px;
+      position: absolute;
+      left: 0;
+      top: 100px;
+      height: 300px;
+    }
+
+    #welcome_h1 {
+      font-size: 35px;
+    }
+
+    #welcome_h2 {
+      font-size: 30px;
+    }
+
+
+
+
+
+
+
+    #welcome_h1 {
+      display: inline;
+      font-family: "Merriweather";
+      font-weight: 700;
+      padding-left: 10px;
+    }
+
+    #welcome_hi_emoji {
+      width: 50px;
+      display: inline;
+      transform-origin: bottom right;
+      rotate: 0;
+    }
+
+    #welcome_h1_cover {
+      position: absolute;
+      top: -500px;
+    }
+
+    #welcome_h2 {
+      background-image: url(img/programmer.webp);
+      background-size: 50px;
+      background-repeat: no-repeat;
+      padding: 0 0 0 40px;
+      position: absolute;
+      left: -500px;
+      top: 85px;
+      font-family: "Merriweather";
+      font-weight: 700;
+    }
+
+
+
+
+
+    #welcome_text {
+      position: absolute;
+      bottom: -500px;
+      font-family: "Merriweather";
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 180%;
+    }
+
+    #welcome_right {
+      width: 350px;
+      position: relative;
+    }
+
+    #welcome_right_cover {
+      width: 350px;
+      position: absolute;
+      bottom: 0;
+      opacity: 0;
+    }
+
+    #welcome_img {
+      width: 350px;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* #laptop_cover {
     width: 300px;
     position: absolute;
     bottom: 100px;
@@ -247,7 +435,7 @@ html, body {
     perspective: 2500px;
     perspective-origin: 50% 100%;
     transform-style: preserve-3d;
-  }
+  } */
 
   #body_cover {
     margin-top: 100vh;
@@ -406,7 +594,7 @@ html, body {
 
   .lang_tags {
     padding: 10px;
-    background-color: aqua;
+    background-color: rgb(66, 137, 137);;
     border-radius: 15px;
     margin-left: 50px;
   }
@@ -549,142 +737,9 @@ html, body {
 
 }
 
-@media (100px <= width <= 200px) {
-  /* #test > span {
-    display: none;
-  } */
-  #w200{
-    /* display: inline; */
-    color: red;
-  }
-}
-
-@media (200px <= width <= 300px) {
-  /* #test > span {
-    display: none;
-  } */
-  #w200{
-    /* display: inline; */
-    color: red;
-  }
-}
-
-@media (300px <= width <= 400px) {
-  /* #test > span {
-    display: none;
-  } */
-  #w300{
-    /* display: inline; */
-    color: red;
-  }
-}
-
-@media (400px <= width <= 500px) {
-  /* #test > span {
-    display: none;
-  } */
-  #w400{
-    color: red;
-  }
-}
-
-@media (500px <= width <= 600px) {
-  /* #test > span {
-    display: none;
-  } */
-  #w500{
-    color: red;
-  }
-}
-
-@media (600px <= width <= 700px) {
-  /* #test > span {
-    display: none;
-  } */
-  #w600{
-    color: red;
-  }
-}
-
-@media (700px <= width <= 800px) {
-  /* #test > span {
-    display: none;
-  } */
-  #w700{
-    color: red;
-  }
-}
-
-@media (800px <= width <= 900px) {
-  /* #test > span {
-    display: none;
-  } */
-  #w800{
-    color: red;
-  }
-}
-
-@media (900px <= width <= 1000px) {
-  /* #test > span {
-    display: none;
-  } */
-  #w900{
-    color: red;
-  }
-}
-
-@media (1000px <= width <= 1100px) {
-  /* #test > span {
-    display: none;
-  } */
-  #w1000{
-    color: red;
-  }
-}
-@media (1100px <= width <= 1200px) {
-  /* #test > span {
-    display: none;
-  } */
-  #w1100{
-    color: red;
-  }
-}
-@media (1200px <= width <= 1300px) {
-  /* #test > span {
-    display: none;
-  } */
-  #w1200{
-    color: red;
-  }
-}
-@media (1300px <= width <= 1400px) {
-  /* #test > span {
-    display: none;
-  } */
-  #w1300{
-    color: red;
-  }
-}
-@media (1400px <= width <= 1500px) {
-  /* #test > span {
-    display: none;
-  } */
-  #w1400{
-    color: red;
-  }
-}
-@media (1500px <= width <= 1600px) {
-  /* #test > span {
-    display: none;
-  } */
-  #w1500{
-    color: red;
-  }
-}
 
 
-
-@media (max-width: 1100px) {
+@media (max-width: 800px) {
 
   body {
     background-color: var(--welcome_back)
@@ -754,13 +809,29 @@ html, body {
     text-align: center;
   }
 
+  /* #settings_block > div:first-of-type {
+    display: flex;
+    justify-content: space-around;
+    width: 110px;
+  } */
+
   #theme_light {
-    font-size: 8vw;
+    width: 7vw;
+    height: 7vw;
+    background-size: 6vw;
+    background-repeat: no-repeat;
+    background-position: center;
     padding-top: 5vw;
+
   }
 
   #theme_dark {
-    font-size: 11vw;
+    width: 7vw;
+    height: 7vw;
+    background-size: 5vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 5vw;
   }
 
   #welcome_block {
@@ -769,57 +840,130 @@ html, body {
     /* border: 2px solid red; */
   }
 
-  #welcome_left {
-    /* background-color: var(--welcome_back); */
-    width: 90vw;
-    height: 50vh;
-    margin: 0 auto;
+
+
+
+
+
+
+
+  @media (max-width: 500px) {
+
+    #welcome_left {
+      width: 90vw;
+      height: 50vh;
+      margin: 0 auto;
+    }
+
+    #welcome_left_cover {
+      width: 90vw;
+      text-align: center;
+    }
+
+    #welcome_h1_cover {
+      margin-top: 15vh;
+    }
+
+    #welcome_hi_emoji {
+      width: 8.5vw;
+      display: inline;
+      transform-origin: bottom right;
+      rotate: 0;
+    }
+
+    #welcome_h1 {
+      font-size: 8.5vw;
+      display: inline;
+      margin-left: 3vw;
+    }
+
+    #welcome_h2 {
+      font-size: 8vw;
+      margin-top: 3vh;
+    }
+
+    #welcome_text {
+      margin-top: 3vh;
+      font-size: 4.5vw;
+      line-height: 200%;
+    }
+
+    #welcome_right {
+      min-height: 110vw;
+    }
+
+    #welcome_img {
+      width: 90vw;
+      height: 110vw;
+      object-fit: contain;
+    }
   }
 
-  #welcome_left_cover {
-    width: 90vw;
-    text-align: center;
+
+
+
+
+
+
+  @media (min-width: 500px) {
+    #welcome_left {
+      width: 90vw;
+      height: 40vh;
+      margin: 0 auto;
+      /* z-index: 10000; */
+    }
+  
+    #welcome_left_cover {
+      width: 90vw;
+      text-align: center;
+    }
+  
+    #welcome_h1_cover {
+      margin-top: 15vh;
+    }
+  
+    #welcome_hi_emoji {
+      width: 8.5vw;
+      display: inline;
+      transform-origin: bottom right;
+      rotate: 0;
+    }
+  
+    #welcome_h1 {
+      font-size: 7.5vw;
+      display: inline;
+      margin-left: 3vw;
+    }
+  
+    #welcome_h2 {
+      font-size: 7vw;
+      margin-top: 3vh;
+    }
+  
+    #welcome_text {
+      margin-top: 3vh;
+      font-size: 3.5vw;
+      line-height: 150%;
+    }
+
+    #welcome_right {
+      min-height: 110vw;
+      /* z-index: 1000; */
+    }
+  
+    #welcome_img {
+      width: 90vw;
+      height: 110vw;
+      object-fit: contain;
+    }
+  
   }
 
-  #welcome_h1_cover {
-    /* width: 65vw; */
-    /* margin: 0 auto; */
-    margin-top: 15vh;
-  }
 
-  #welcome_hi_emoji {
-    width: 8.5vw;
-    display: inline;
-    transform-origin: bottom right;
-    rotate: 0;
-  }
 
-  #welcome_h1 {
-    font-size: 8.5vw;
-    display: inline;
-    margin-left: 3vw;
-  }
 
-  #welcome_h2 {
-    font-size: 8vw;
-    margin-top: 3vh;
-  }
 
-  #welcome_text {
-    margin-top: 3vh;
-    font-size: 4.5vw;
-    line-height: 200%;
-  }
 
-  /* #welcome_right {
-    
-  } */
-
-  #welcome_img {
-    width: 90vw;
-    height: 110vw;
-    object-fit: contain;
-  }
  
   #body_cover {
     width: 100vw;
@@ -867,6 +1011,7 @@ html, body {
     margin: 0 2.5vw;
     height: 75vh;
     border: 4px solid var(--frames);
+    border-radius: 7vw;
     box-sizing: border-box;
     padding: 2.5vw;
   }
@@ -909,7 +1054,7 @@ html, body {
 
   #projects_mobile_arrows {
     width: 50vw;
-    margin: 0 auto;
+    margin: 2vh auto;
     display: flex;
     justify-content: space-between;
   }
@@ -935,8 +1080,8 @@ html, body {
 
 
   #project_full_discription_cover {
-    width: 110vw;
-    height: 110vh;
+    width: 100vw;
+    height: 100vh;
     background-color: var(--back_07);
     position: fixed;
     top: 0;
@@ -957,7 +1102,7 @@ html, body {
   }
 
   #project_full_discription {
-    width: 100vw;
+    width: 90vw;
     height: 100vh;
     margin: 0 auto;
     background-color: var(--welcome_back);
@@ -965,7 +1110,7 @@ html, body {
   }
 
   #project_full_discription > img {
-    width: 100vw;
+    width: 90vw;
   }
 
   #project_full_discription > h3 {
@@ -977,11 +1122,19 @@ html, body {
     font-size: 5vw;
   }
 
+  .lang_tags_cover {
+    width: 90vw;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
   .lang_tags {
     padding: 3vw;
-    background-color: aqua;
+    background-color: rgb(66, 137, 137);
     border-radius: 3vw;
-    margin-left: 5vw;
+    margin: 5vw;
+    /* display: block; */
   }
 
   .projects_links {
