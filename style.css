@@ -484,6 +484,10 @@ html, body {
     line-height: 200%;
   }
 
+  .lang_tags_cover {
+    padding: 20px;
+  }
+
   .lang_tags {
     padding: 10px;
     background-color: rgb(66, 137, 137);;
