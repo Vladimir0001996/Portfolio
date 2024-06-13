@@ -25,7 +25,6 @@ jQuery(document).ready(function($){
    let progressPointsBackColorActive;
 
    function LetDark () {
-    console.log('let dark');
     $('body').addClass('dark_theme')
     $('body').removeClass('light_theme')
     $('#body_cover').css('background-image','url(img/dark_back_v2.webp)')
@@ -34,20 +33,6 @@ jQuery(document).ready(function($){
     $('#skill_1_img').attr('src','img/html_dark.webp')
     $('#skill_2_img').attr('src','img/css_dark.webp')
     $('#skill_3_img').attr('src','img/js_dark.webp')
-
-    // $('#theme_light').css('color','#848484')
-    // $('#theme_dark').hover(()=>{
-    //   $('#theme_dark').css('color','#282879')
-    // },()=>{
-    //   $('#theme_dark').css('color','#282879')
-    // })
-    // $('#theme_light').hover(()=>{
-    //   $('#theme_light').css('color','#ffff00')
-    // },()=>{
-    //   $('#theme_light').css('color','#848484')
-    // })
-    // $('#theme_dark').css('color','#282879')
-
     $('#theme_light').css('background-image','url(img/sun_unactive.webp)')
     $('#theme_dark').hover(()=>{
       $('#theme_dark').css('background-image','url(img/moon.webp)')
@@ -60,8 +45,6 @@ jQuery(document).ready(function($){
       $('#theme_light').css('background-image','url(img/sun_unactive.webp)')
     })
     $('#theme_dark').css('background-image','url(img/moon.webp)')
-
-
     $('#mail').css('background-image','url(img/e-mail_dark.webp)')
     $('#footer_mail').css('background-image','url(img/e-mail_dark.webp)')
     $('#header_settings').attr('src','img/settings_dark.webp')
@@ -70,7 +53,6 @@ jQuery(document).ready(function($){
   }
 
   function LetLight () {
-    console.log('let light');
     $('body').removeClass('dark_theme')
     $('body').addClass('light_theme')
     $('#body_cover').css('background-image','url(img/light_back_v4.webp)')
@@ -79,8 +61,6 @@ jQuery(document).ready(function($){
     $('#skill_1_img').attr('src','img/html.webp')
     $('#skill_2_img').attr('src','img/css.webp')
     $('#skill_3_img').attr('src','img/js.webp')
-
-
     $('#theme_light').css('background-image','url(img/sun.webp)')
     $('#theme_light').hover(()=>{
       $('#theme_light').css('background-image','url(img/sun.webp)')
@@ -93,7 +73,6 @@ jQuery(document).ready(function($){
     },()=>{
       $('#theme_dark').css('background-image','url(img/moon_unactive.webp)')
     })
-
     $('#mail').css('background-image','url(img/e-mail.webp)')
     $('#footer_mail').css('background-image','url(img/e-mail.webp)')
     $('#header_settings').attr('src','img/settings.webp')
@@ -140,10 +119,8 @@ jQuery(document).ready(function($){
     },15)
     setTimeout(() => {
       clearInterval(welcomeAnimaiton)
-      console.log(iterationCounter);
     }, 2500);
   }
-
     counter = -500
     let blocksAnimation = setInterval(()=>{
       counter = counter + 5
@@ -160,7 +137,6 @@ jQuery(document).ready(function($){
         $('#welcome_h1_cover').css('top', px1).css('opacity' , opacity)
         $('#welcome_h2').css('left', px1).css('opacity' , opacity)
         $('#welcome_text').css('bottom', px2).css('opacity' , opacity)
-        console.log('active');
       }
       if (counter > 1) {
         HiAnimation()
@@ -171,8 +147,6 @@ jQuery(document).ready(function($){
     $('#welcome_hi_emoji').on('mouseover', ()=>{
       HiAnimation()
     })
-
-
 
   // Projects from json
   let contentRequestURL = 'data/content.json';
@@ -192,14 +166,12 @@ jQuery(document).ready(function($){
       if (i == (contentOnServer.projects.length)-1) {
         $('#projects_scroll').children().on('click',(e)=>{
           let idInBase;
-          console.log(e.target);
           if (e.target.className !== 'project_card') {
             idInBase = contentOnServer.projects.length - e.target.parentElement.id -1;
           }
           else {
             idInBase = contentOnServer.projects.length - e.target.id -1;
           }
-          console.log(idInBase);
           $('#project_full_discription').children().remove()
           $('#project_full_discription').prepend(contentOnServer.projects[idInBase].full_discription)
           $('#project_full_discription_cover').css('display','block');
@@ -228,7 +200,6 @@ jQuery(document).ready(function($){
   // projects gallery progress points
   function ProgressBar (left) {
     $('.progress_points').css('background-color', 'transparent')
-    console.log(left);
     if (left == 0) {
       $('#progress_point_1').css('background-color', progressPointsBackColorActive)
     }
@@ -256,10 +227,8 @@ jQuery(document).ready(function($){
   }
 
   let left = 0;
-  ProgressBar(left)
 
   $('#projects_left_arrow').on('click',()=>{
-    console.log(IsMobile);
     if (IsMobile == false) {
       left = left + 500
       if (left > 0) {
@@ -274,11 +243,12 @@ jQuery(document).ready(function($){
     }
     ProgressBar(left)
     if (IsMobile == false) {
-      $('#projects_scroll').css('left', left)
+      $('#projects_scroll').css('margin-left', left)
+
     }
     else {
       let leftVW = left + 'vw'
-      $('#projects_scroll').css('left', leftVW)
+      $('#projects_scroll').css('margin-left', leftVW)
     }
   })
 
@@ -298,11 +268,11 @@ jQuery(document).ready(function($){
     
     ProgressBar(left)
     if (IsMobile == false) {
-      $('#projects_scroll').css('left', left)
+      $('#projects_scroll').css('margin-left', left)
     }
     else {
       let leftVW = left + 'vw'
-      $('#projects_scroll').css('left', leftVW)
+      $('#projects_scroll').css('margin-left', leftVW)
     }
   })
 
@@ -365,7 +335,6 @@ jQuery(document).ready(function($){
 
   // header settings 
   $('#header_settings').on('click', ()=>{
-    console.log('click');
     $('#settings_block').toggleClass('displayNone')
     if ($('#settings_block').css('display') == 'none') {
       if (IsMobile == false) {
@@ -393,7 +362,6 @@ jQuery(document).ready(function($){
   // skills animation
   $(document).on('scroll',()=>{
     if (window.scrollY > $('#project_container').offset().top) {
-      // console.log();
       $('#skill_1_img').css('opacity','1')
       setTimeout(()=>{
         $('#skill_2_img').css('opacity','1');
