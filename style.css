@@ -4,8 +4,29 @@ html, body {
   box-sizing: border-box;
 }
 
-/* font-family: '"Merriweather"';
-  font-family: '"Roboto"'; */
+  @font-face {
+    font-family: "Merriweather";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Merriweather"),
+         url("fonts/Merriweather-Regular.woff2") format("woff2"),
+  }
+
+  @font-face {
+    font-family: "Merriweather";
+    font-style: normal;
+    font-weight: 700;
+    src: local("Merriweather"),
+         url("fonts/Merriweather-Bold.woff2") format("woff2"),
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Roboto"),
+         url("fonts/Roboto-Regular.woff2") format("woff2"),
+  }
 
 .light_theme {
   color: #1d2020;
