@@ -157,7 +157,7 @@ jQuery(document).ready(function($){
   contentRequest.onload = function () {
     let contentOnServer = contentRequest.response;
     for (let i = 0; i < contentOnServer.projects.length; i++) {
-      $('#projects_scroll').prepend('<div class="project_card" id="' + i + '"><h3></h3><img><p></p></div>')
+      $('#projects_scroll').prepend('<div class="project_card" id="' + i + '"><h3></h3><img alt="project prewiew"><p></p></div>')
     }
     for (let i = 0; i < contentOnServer.projects.length; i++) {
       $('#projects_scroll')[0].children[i].children[0].innerText = contentOnServer.projects[i].header;
