@@ -1,5 +1,23 @@
 jQuery(document).ready(function($){
 
+  let UserLang;
+  if (localStorage.lang !== undefined) {
+    UserLang = localStorage.lang
+  }
+  else {
+    if (navigator.language == 'ru-RU') {
+      UserLang = 'ru'
+    }
+    else {
+      UserLang = 'en'
+    }
+  }
+  
+  // console.log(localStorage.lassd);
+  if (localStorage.length !== 0) {
+    
+  }
+  
 
   // mobile/desctop
   // console.log(window.innerWidth);
@@ -10,11 +28,28 @@ jQuery(document).ready(function($){
     $('#projects_right_arrow').removeAttr('id')
     $('#projects_mobile_arrows')[0].children[0].setAttribute('id','projects_left_arrow')
     $('#projects_mobile_arrows')[0].children[1].setAttribute('id','projects_right_arrow')
-    $('#welcome_img').attr('src','img/welcome_mob.webp')
+    $('#welcome_img').attr('src','../img/welcome_mob.webp')
   }
   else {
-    $('#welcome_img').attr('src','img/welcome.webp')
+    $('#welcome_img').attr('src','../img/welcome.webp')
   }
+
+
+
+  // lang switch
+
+  $('#lang_switch_to_en').on('click', ()=>{
+    window.location.href = '../pages/index-en.html'
+    localStorage.setItem('lang','en')
+  })
+
+  $('#lang_switch_to_ru').on('click', ()=>{
+    window.location.href = '../index.html'
+    localStorage.setItem('lang','ru')
+
+  })
+  
+
 
 
 
@@ -27,27 +62,27 @@ jQuery(document).ready(function($){
    function LetDark () {
     $('body').addClass('dark_theme')
     $('body').removeClass('light_theme')
-    $('#body_cover').css('background-image','url(img/dark_back_v2.webp)')
-    $('#projects_right_arrow').css('background-image','url(img/right_dark.webp)')
-    $('#projects_left_arrow').css('background-image','url(img/left_dark.webp)')
-    $('#skill_1_img').attr('src','img/html_dark.webp')
-    $('#skill_2_img').attr('src','img/css_dark.webp')
-    $('#skill_3_img').attr('src','img/js_dark.webp')
-    $('#theme_light').css('background-image','url(img/sun_unactive.webp)')
+    $('#body_cover').css('background-image','url(../img/dark_back_v2.webp)')
+    $('#projects_right_arrow').css('background-image','url(../img/right_dark.webp)')
+    $('#projects_left_arrow').css('background-image','url(../img/left_dark.webp)')
+    $('#skill_1_img').attr('src','../img/html_dark.webp')
+    $('#skill_2_img').attr('src','../img/css_dark.webp')
+    $('#skill_3_img').attr('src','../img/js_dark.webp')
+    $('#theme_light').css('background-image','url(../img/sun_unactive.webp)')
     $('#theme_dark').hover(()=>{
-      $('#theme_dark').css('background-image','url(img/moon.webp)')
+      $('#theme_dark').css('background-image','url(../img/moon.webp)')
     },()=>{
-      $('#theme_dark').css('background-image','url(img/moon.webp)')
+      $('#theme_dark').css('background-image','url(../img/moon.webp)')
     })
     $('#theme_light').hover(()=>{
-      $('#theme_light').css('background-image','url(img/sun.webp)')
+      $('#theme_light').css('background-image','url(../img/sun.webp)')
     },()=>{
-      $('#theme_light').css('background-image','url(img/sun_unactive.webp)')
+      $('#theme_light').css('background-image','url(../img/sun_unactive.webp)')
     })
-    $('#theme_dark').css('background-image','url(img/moon.webp)')
-    $('#mail').css('background-image','url(img/e-mail_dark.webp)')
-    $('#footer_mail').css('background-image','url(img/e-mail_dark.webp)')
-    $('#header_settings').attr('src','img/settings_dark.webp')
+    $('#theme_dark').css('background-image','url(../img/moon.webp)')
+    $('#mail').css('background-image','url(../img/e-mail_dark.webp)')
+    $('#footer_mail').css('background-image','url(../img/e-mail_dark.webp)')
+    $('#header_settings').attr('src','../img/settings_dark.webp')
 
     progressPointsBackColorActive = '#e6eceb'
   }
@@ -55,44 +90,62 @@ jQuery(document).ready(function($){
   function LetLight () {
     $('body').removeClass('dark_theme')
     $('body').addClass('light_theme')
-    $('#body_cover').css('background-image','url(img/light_back_v4.webp)')
-    $('#projects_right_arrow').css('background-image','url(img/right.webp)')
-    $('#projects_left_arrow').css('background-image','url(img/left.webp)')
-    $('#skill_1_img').attr('src','img/html.webp')
-    $('#skill_2_img').attr('src','img/css.webp')
-    $('#skill_3_img').attr('src','img/js.webp')
-    $('#theme_light').css('background-image','url(img/sun.webp)')
+    $('#body_cover').css('background-image','url(../img/light_back_v4.webp)')
+    $('#projects_right_arrow').css('background-image','url(../img/right.webp)')
+    $('#projects_left_arrow').css('background-image','url(../img/left.webp)')
+    $('#skill_1_img').attr('src','../img/html.webp')
+    $('#skill_2_img').attr('src','../img/css.webp')
+    $('#skill_3_img').attr('src','../img/js.webp')
+    $('#theme_light').css('background-image','url(../img/sun.webp)')
     $('#theme_light').hover(()=>{
-      $('#theme_light').css('background-image','url(img/sun.webp)')
+      $('#theme_light').css('background-image','url(../img/sun.webp)')
     },()=>{
-      $('#theme_light').css('background-image','url(img/sun.webp)')
+      $('#theme_light').css('background-image','url(../img/sun.webp)')
     })
-    $('#theme_dark').css('background-image','url(img/moon_unactive.webp)')
+    $('#theme_dark').css('background-image','url(../img/moon_unactive.webp)')
     $('#theme_dark').hover(()=>{
-      $('#theme_dark').css('background-image','url(img/moon.webp)')
+      $('#theme_dark').css('background-image','url(../img/moon.webp)')
     },()=>{
-      $('#theme_dark').css('background-image','url(img/moon_unactive.webp)')
+      $('#theme_dark').css('background-image','url(../img/moon_unactive.webp)')
     })
-    $('#mail').css('background-image','url(img/e-mail.webp)')
-    $('#footer_mail').css('background-image','url(img/e-mail.webp)')
-    $('#header_settings').attr('src','img/settings.webp')
+    $('#mail').css('background-image','url(../img/e-mail.webp)')
+    $('#footer_mail').css('background-image','url(../img/e-mail.webp)')
+    $('#header_settings').attr('src','../img/settings.webp')
     progressPointsBackColorActive = '#1d2020'
   }
   $('#theme_light').on('click', ()=>{
     LetLight()
+    localStorage.setItem('theme','light')
   })
   $('#theme_dark').on('click', ()=>{
     LetDark()
+    localStorage.setItem('theme','dark')
   })
 
   // theme auto setter 
   let isThemeDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  if (isThemeDark == true) {
-    LetDark()
+  if (localStorage.theme !== undefined) {
+    if (localStorage.theme == 'light') {
+      LetLight()
+    }
+    if (localStorage.theme == 'dark') {
+      LetDark()
+    }
   }
   else {
-    LetLight()
+    if (isThemeDark == true) {
+      LetDark()
+    }
+    else {
+      LetLight()
+    }
   }
+
+
+
+
+
+
 
   // welcome Animation
   let iterationCounter = 0;
@@ -149,7 +202,13 @@ jQuery(document).ready(function($){
     })
 
   // Projects from json
-  let contentRequestURL = 'data/content.json';
+  let contentRequestURL;
+  if (UserLang == 'ru') {
+    contentRequestURL = '../data/content_ru.json';
+  }
+  else {
+    contentRequestURL = '../data/content.json';
+  }
   let contentRequest = new XMLHttpRequest();
   contentRequest.open("GET", contentRequestURL);
   contentRequest.responseType = "json";
@@ -204,26 +263,26 @@ jQuery(document).ready(function($){
       $('#progress_point_1').css('background-color', progressPointsBackColorActive)
     }
     else if (left == -500) {
-      $('#progress_point_1').css('background-color', progressPointsBackColorActive)
+      // $('#progress_point_1').css('background-color', progressPointsBackColorActive)
       $('#progress_point_2').css('background-color', progressPointsBackColorActive)
     }
     else if (left == -1000) {
-      $('#progress_point_2').css('background-color', progressPointsBackColorActive)
+      $('#progress_point_3').css('background-color', progressPointsBackColorActive)
     }
     else if (left == -1500) {
-      $('#progress_point_2').css('background-color', progressPointsBackColorActive)
-      $('#progress_point_3').css('background-color', progressPointsBackColorActive)
-    }
-    else if (left == -2000) {
-      $('#progress_point_3').css('background-color', progressPointsBackColorActive)
-    }
-    else if (left == -2500) {
-      $('#progress_point_3').css('background-color', progressPointsBackColorActive)
       $('#progress_point_4').css('background-color', progressPointsBackColorActive)
+      // $('#progress_point_3').css('background-color', progressPointsBackColorActive)
     }
-    else if (left == -3000) {
-      $('#progress_point_4').css('background-color', progressPointsBackColorActive)
-    }
+    // else if (left == -2000) {
+    //   $('#progress_point_5').css('background-color', progressPointsBackColorActive)
+    // }
+    // else if (left == -2500) {
+    //   $('#progress_point_3').css('background-color', progressPointsBackColorActive)
+    //   $('#progress_point_4').css('background-color', progressPointsBackColorActive)
+    // }
+    // else if (left == -3000) {
+    //   $('#progress_point_4').css('background-color', progressPointsBackColorActive)
+    // }
   }
 
   let left = 0;
@@ -232,13 +291,13 @@ jQuery(document).ready(function($){
     if (IsMobile == false) {
       left = left + 500
       if (left > 0) {
-        left = -3000
+        left = -1500
       }
     }
     else {
       left = left + 90
     if (left > 0) {
-      left = -630
+      left = -360
     }
     }
     ProgressBar(left)
@@ -255,13 +314,13 @@ jQuery(document).ready(function($){
   $('#projects_right_arrow').on('click',()=>{
     if (IsMobile == false) {
       left = left - 500;
-      if (left < -3000) {
+      if (left < -1500) {
         left = 0
       }
     }
     else {
       left = left - 90;
-      if (left < -630) {
+      if (left < -360) {
         left = 0
       }
     }
@@ -338,8 +397,8 @@ jQuery(document).ready(function($){
     $('#settings_block').toggleClass('displayNone')
     if ($('#settings_block').css('display') == 'none') {
       if (IsMobile == false) {
-        $('#settings_block').css('display','flex')
-        $('header').css('width','610px')  
+        $('#settings_block').css('display','grid')
+        $('header').css('width','750px')  
       }
       else {
         $('#settings_block').css('display','block')
@@ -358,6 +417,9 @@ jQuery(document).ready(function($){
 
     }
   })
+
+  console.log(localStorage);
+  
 
   // skills animation
   $(document).on('scroll',()=>{

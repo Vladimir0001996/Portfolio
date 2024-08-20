@@ -36,6 +36,7 @@ html, body {
   --elems_back: #e7e7e7;
   --shadow: ;
   --back_07: rgba(231, 231, 231, 0.8);
+  --back_085: rgba(231, 231, 231, 0.95);
   --checkmarks: #0e327a;
 }
 
@@ -46,6 +47,8 @@ html, body {
   --frames: #919796;
   --elems_back: #262424;
   --back_07: rgba(42, 43, 45, 0.8);
+  --back_085: rgba(42, 43, 45, 0.8);
+
   --checkmarks: #93abdc;
 }
 
@@ -82,6 +85,12 @@ html, body {
     display: flex;
     justify-content: space-between;
   }
+
+  .flexSADesctop {
+    display: flex;
+    justify-content: space-around;
+  }
+
 
   .width1000 {
     width: 1000px;
@@ -143,16 +152,17 @@ html, body {
   }
 
   #settings_block {
-    width: 100px;
+    width: 250px;
     padding: 5px 15px;
     display: none;
+    grid-template-columns: repeat(3 , 1fr);
   }
 
-  #settings_block > div {
+  /* #settings_block > div {
     display: flex;
     justify-content: space-around;
-    width: 110px;
-  }
+    width: 250px;
+  } */
 
   #theme_light {
     width: 20px;
@@ -167,6 +177,49 @@ html, body {
     background-size: 15px;
     background-repeat: no-repeat;
     background-position: center;
+  }
+
+  .lang_en {
+    box-sizing: border-box;
+    font-size: 15px;
+    padding: 3px 3px 3px 25px;
+    border: 2px solid var(--frames);
+    border-radius: 20px;
+    background-image: url(img/en.webp);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 3px;
+    opacity: 0.5;
+    width: 60px;
+    height: 26px;
+  }
+
+  .lang_en:hover {
+    opacity: 1;
+  }
+
+
+  .lang_ru {
+    box-sizing: border-box;
+    font-size: 15px;
+    padding: 3px 3px 3px 25px;
+    border: 2px solid var(--frames);
+    border-radius: 20px;
+    background-image: url(img/ru.webp);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 3px;
+    opacity: 0.5;
+    width: 60px;
+    height: 26px;
+  }
+
+  .lang_ru:hover {
+    opacity: 1;
+  }
+
+  .opacity_1 {
+    opacity: 1;
   }
 
   @media (min-width: 1200px) {
@@ -469,7 +522,7 @@ html, body {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: var(--back_07);
+    background-color: var(--back_085);
     z-index: 4000;
     display: none;
   }
