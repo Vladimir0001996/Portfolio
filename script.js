@@ -28,10 +28,10 @@ jQuery(document).ready(function($){
     $('#projects_right_arrow').removeAttr('id')
     $('#projects_mobile_arrows')[0].children[0].setAttribute('id','projects_left_arrow')
     $('#projects_mobile_arrows')[0].children[1].setAttribute('id','projects_right_arrow')
-    $('#welcome_img').attr('src','../img/welcome_mob.webp')
+    $('#welcome_img').attr('src','/Vladimir0001996/img/welcome_mob.webp')
   }
   else {
-    $('#welcome_img').attr('src','../img/welcome.webp')
+    $('#welcome_img').attr('src','/Vladimir0001996/img/welcome.webp')
   }
 
 
