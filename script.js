@@ -204,10 +204,10 @@ jQuery(document).ready(function($){
   // Projects from json
   let contentRequestURL;
   if (UserLang == 'ru') {
-    contentRequestURL = '../data/content_ru.json';
+    contentRequestURL = '/Vladimir0001996/data/content_ru.json';
   }
   else {
-    contentRequestURL = '../data/content.json';
+    contentRequestURL = '/Vladimir0001996/data/content.json';
   }
   let contentRequest = new XMLHttpRequest();
   contentRequest.open("GET", contentRequestURL);
