@@ -39,7 +39,7 @@ jQuery(document).ready(function($){
   // lang switch
 
   $('#lang_switch_to_en').on('click', ()=>{
-    window.location.href = '../pages/index-en.html'
+    window.location.href = 'pages/index-en.html'
     localStorage.setItem('lang','en')
   })
 
