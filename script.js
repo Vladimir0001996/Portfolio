@@ -62,27 +62,27 @@ jQuery(document).ready(function($){
    function LetDark () {
     $('body').addClass('dark_theme')
     $('body').removeClass('light_theme')
-    $('#body_cover').css('background-image','url(../img/dark_back_v2.webp)')
-    $('#projects_right_arrow').css('background-image','url(../img/right_dark.webp)')
-    $('#projects_left_arrow').css('background-image','url(../img/left_dark.webp)')
-    $('#skill_1_img').attr('src','../img/html_dark.webp')
-    $('#skill_2_img').attr('src','../img/css_dark.webp')
-    $('#skill_3_img').attr('src','../img/js_dark.webp')
-    $('#theme_light').css('background-image','url(../img/sun_unactive.webp)')
+    $('#body_cover').css('background-image','url(/Vladimir0001996/img/dark_back_v2.webp)')
+    $('#projects_right_arrow').css('background-image','url(/Vladimir0001996/img/right_dark.webp)')
+    $('#projects_left_arrow').css('background-image','url(/Vladimir0001996/img/left_dark.webp)')
+    $('#skill_1_img').attr('src','/Vladimir0001996/img/html_dark.webp')
+    $('#skill_2_img').attr('src','/Vladimir0001996/img/css_dark.webp')
+    $('#skill_3_img').attr('src','/Vladimir0001996/img/js_dark.webp')
+    $('#theme_light').css('background-image','url(/Vladimir0001996/img/sun_unactive.webp)')
     $('#theme_dark').hover(()=>{
-      $('#theme_dark').css('background-image','url(../img/moon.webp)')
+      $('#theme_dark').css('background-image','url(/Vladimir0001996/img/moon.webp)')
     },()=>{
-      $('#theme_dark').css('background-image','url(../img/moon.webp)')
+      $('#theme_dark').css('background-image','url(/Vladimir0001996/img/moon.webp)')
     })
     $('#theme_light').hover(()=>{
-      $('#theme_light').css('background-image','url(../img/sun.webp)')
+      $('#theme_light').css('background-image','url(/Vladimir0001996/img/sun.webp)')
     },()=>{
-      $('#theme_light').css('background-image','url(../img/sun_unactive.webp)')
+      $('#theme_light').css('background-image','url(/Vladimir0001996/img/sun_unactive.webp)')
     })
-    $('#theme_dark').css('background-image','url(../img/moon.webp)')
-    $('#mail').css('background-image','url(../img/e-mail_dark.webp)')
-    $('#footer_mail').css('background-image','url(../img/e-mail_dark.webp)')
-    $('#header_settings').attr('src','../img/settings_dark.webp')
+    $('#theme_dark').css('background-image','url(/Vladimir0001996/img/moon.webp)')
+    $('#mail').css('background-image','url(/Vladimir0001996/img/e-mail_dark.webp)')
+    $('#footer_mail').css('background-image','url(/Vladimir0001996/img/e-mail_dark.webp)')
+    $('#header_settings').attr('src','/Vladimir0001996/img/settings_dark.webp')
 
     progressPointsBackColorActive = '#e6eceb'
   }
@@ -90,27 +90,27 @@ jQuery(document).ready(function($){
   function LetLight () {
     $('body').removeClass('dark_theme')
     $('body').addClass('light_theme')
-    $('#body_cover').css('background-image','url(../img/light_back_v4.webp)')
-    $('#projects_right_arrow').css('background-image','url(../img/right.webp)')
-    $('#projects_left_arrow').css('background-image','url(../img/left.webp)')
-    $('#skill_1_img').attr('src','../img/html.webp')
-    $('#skill_2_img').attr('src','../img/css.webp')
-    $('#skill_3_img').attr('src','../img/js.webp')
-    $('#theme_light').css('background-image','url(../img/sun.webp)')
+    $('#body_cover').css('background-image','url(/Vladimir0001996/img/light_back_v4.webp)')
+    $('#projects_right_arrow').css('background-image','url(/Vladimir0001996/img/right.webp)')
+    $('#projects_left_arrow').css('background-image','url(/Vladimir0001996/img/left.webp)')
+    $('#skill_1_img').attr('src','/Vladimir0001996/img/html.webp')
+    $('#skill_2_img').attr('src','/Vladimir0001996/img/css.webp')
+    $('#skill_3_img').attr('src','/Vladimir0001996/img/js.webp')
+    $('#theme_light').css('background-image','url(/Vladimir0001996/img/sun.webp)')
     $('#theme_light').hover(()=>{
-      $('#theme_light').css('background-image','url(../img/sun.webp)')
+      $('#theme_light').css('background-image','url(/Vladimir0001996/img/sun.webp)')
     },()=>{
-      $('#theme_light').css('background-image','url(../img/sun.webp)')
+      $('#theme_light').css('background-image','url(/Vladimir0001996/img/sun.webp)')
     })
-    $('#theme_dark').css('background-image','url(../img/moon_unactive.webp)')
+    $('#theme_dark').css('background-image','url(/Vladimir0001996/img/moon_unactive.webp)')
     $('#theme_dark').hover(()=>{
-      $('#theme_dark').css('background-image','url(../img/moon.webp)')
+      $('#theme_dark').css('background-image','url(/Vladimir0001996/img/moon.webp)')
     },()=>{
-      $('#theme_dark').css('background-image','url(../img/moon_unactive.webp)')
+      $('#theme_dark').css('background-image','url(/Vladimir0001996/img/moon_unactive.webp)')
     })
-    $('#mail').css('background-image','url(../img/e-mail.webp)')
-    $('#footer_mail').css('background-image','url(../img/e-mail.webp)')
-    $('#header_settings').attr('src','../img/settings.webp')
+    $('#mail').css('background-image','url(/Vladimir0001996/img/e-mail.webp)')
+    $('#footer_mail').css('background-image','url(/Vladimir0001996/img/e-mail.webp)')
+    $('#header_settings').attr('src','/Vladimir0001996/img/settings.webp')
     progressPointsBackColorActive = '#1d2020'
   }
   $('#theme_light').on('click', ()=>{
